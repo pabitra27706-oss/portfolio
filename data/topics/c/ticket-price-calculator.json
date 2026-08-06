@@ -1,0 +1,31 @@
+{
+  "topic": {
+    "id": "c-if-else-statement-in-c",
+    "title": "If-Else Statement in C",
+    "language": "C",
+    "category": "Basics",
+    "difficulty": "beginner",
+    "dateCreated": "2026-08-06T18:10:52Z",
+    "lastUpdated": "2026-08-06T18:10:52Z",
+    "tags": [
+      "if-else",
+      "conditional",
+      "printf"
+    ],
+    "description": "Conditional execution using if-else statements. Decision making and branching logic in C programs.",
+    "learningNotes": {
+      "whatILearned": "How to create a long logic and add new one as well.",
+      "challenges": "To add new logics.",
+      "nextSteps": "I will try more."
+    }
+  },
+  "files": [
+    {
+      "id": "file-001",
+      "fileName": "ticket-price-calculator.c",
+      "filePath": "content/c/ticket-price-calculator.c",
+      "description": "A simple ticket price calculater.",
+      "dateAdded": "2026-08-06T18:10:52Z"
+    }
+  ]
+}

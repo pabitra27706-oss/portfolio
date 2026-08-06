@@ -1,10 +1,10 @@
 {
   "metadata": {
     "siteName": "Learning Archive",
-    "lastUpdated": "2026-08-06T14:38:24Z",
+    "lastUpdated": "2026-08-06T18:10:52Z",
     "firstEntryDate": "2026-01-08",
-    "totalTopics": 7,
-    "totalFiles": 7,
+    "totalTopics": 8,
+    "totalFiles": 8,
     "languages": [
       "C",
       "Python",
@@ -12,6 +12,21 @@
     ]
   },
   "topics": [
+    {
+      "id": "c-if-else-statement-in-c",
+      "title": "If-Else Statement in C",
+      "language": "C",
+      "dateCreated": "2026-08-06",
+      "lastUpdated": "2026-08-06",
+      "fileCount": 1,
+      "tags": [
+        "if-else",
+        "conditional",
+        "printf"
+      ],
+      "description": "Conditional execution using if-else statements. Decision making and branching logic in C programs.",
+      "topicFile": "data/topics/c/ticket-price-calculator.json"
+    },
     {
       "id": "c-grade-calculator",
       "title": "grade-calculator",
