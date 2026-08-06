@@ -1,0 +1,29 @@
+{
+  "topic": {
+    "id": "c-divider",
+    "title": "divider",
+    "language": "C",
+    "category": "Arithmetic operation",
+    "difficulty": "beginner",
+    "dateCreated": "2026-08-06T06:34:50Z",
+    "lastUpdated": "2026-08-06T06:34:50Z",
+    "tags": [
+      "arithmetic-operation"
+    ],
+    "description": "Didier of 2 integer numbers.",
+    "learningNotes": {
+      "whatILearned": "Work of % to find reminder.",
+      "challenges": "Not much.",
+      "nextSteps": "A little advance forward."
+    }
+  },
+  "files": [
+    {
+      "id": "file-001",
+      "fileName": "divider.c",
+      "filePath": "content/c/divider.c",
+      "description": "Simply divider.",
+      "dateAdded": "2026-08-06T06:34:50Z"
+    }
+  ]
+}

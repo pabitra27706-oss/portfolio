@@ -1,0 +1,29 @@
+{
+  "topic": {
+    "id": "c-arrays",
+    "title": "Arrays in C",
+    "language": "C",
+    "category": "Data Structures",
+    "difficulty": "beginner",
+    "dateCreated": "2026-01-22T11:00:00Z",
+    "lastUpdated": "2026-01-22T11:00:00Z",
+    "tags": ["arrays", "2d-arrays", "linear-search"],
+    "description": "Working with 1-D and 2-D arrays in C: declaration and initialisation, traversing with loops, computing sum/average/highest element, linear search, and reversing an array into a second array.",
+    "learningNotes": {
+      "whatILearned": "Array indexes start at 0 and the name of an array behaves like a pointer to its first element (which connected nicely with my later pointers topic). Nested loops are the natural way to walk a 2-D array.",
+      "challenges": "Off-by-one errors in loop bounds - writing i <= SIZE instead of i < SIZE. Learned to test boundary cases first.",
+      "nextSteps": "Bubble sort on arrays, and passing arrays to functions properly."
+    }
+  },
+  "files": [
+    {
+      "id": "file-001",
+      "fileName": "arrays.c",
+      "filePath": "content/c/arrays.c",
+      "description": "1-D and 2-D arrays: traversal, sum/average/highest, linear search with break, matrix printing and reversing.",
+      "dateAdded": "2026-01-22T11:00:00Z",
+      "lines": 73,
+      "size": "2.1KB"
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "metadata": {
+    "lastUpdated": "2026-08-05T12:00:00Z",
+    "totalProjects": 6
+  },
+  "projects": [
+    {
+      "id": "portfolio",
+      "name": "Portfolio & Learning Archive System",
+      "description": "This website — a JSON-driven portfolio with a searchable learning archive, syntax-highlighted code previews and ZIP downloads. No frameworks, no build step.",
+      "repoUrl": "https://github.com/pabitra27706-oss/portfolio",
+      "liveUrl": "https://pabitra27706-oss.github.io/portfolio/",
+      "tech": ["HTML", "CSS", "JavaScript", "JSON"],
+      "status": "live",
+      "featured": true,
+      "dateAdded": "2026-08-05",
+      "highlights": [
+        "Search, filters and 3 view modes",
+        "Code preview with line numbers",
+        "Multi-topic ZIP downloads"
+      ]
+    },
+    {
+      "id": "matriq",
+      "name": "Matriq — AI-powered BI Dashboard",
+      "description": "AI-powered Business Intelligence dashboard built for Hackathon 2026.",
+      "repoUrl": "https://github.com/pabitra27706-oss/matriq",
+      "tech": ["TypeScript"],
+      "status": "completed",
+      "featured": true,
+      "highlights": [
+        "Hackathon 2026 build"
+      ]
+    },
+    {
+      "id": "attendance",
+      "name": "Attendance",
+      "description": "A tool to take attendance of online classes.",
+      "repoUrl": "https://github.com/pabitra27706-oss/Attendance",
+      "tech": ["JavaScript"],
+      "status": "completed"
+    },
+    {
+      "id": "termux-mastery",
+      "name": "Termux Mastery",
+      "description": "Termux tutorial — beginner to advanced.",
+      "repoUrl": "https://github.com/pabitra27706-oss/Termux-Mastery",
+      "tech": ["HTML"],
+      "status": "completed"
+    },
+    {
+      "id": "club-web",
+      "name": "Club Web",
+      "description": "A club website with a custom CSS design.",
+      "repoUrl": "https://github.com/pabitra27706-oss/club-web",
+      "tech": ["HTML", "CSS"],
+      "status": "completed"
+    },
+    {
+      "id": "diploma-2nd-sem",
+      "name": "Diploma 2nd Sem",
+      "description": "Study resources for 2nd semester diploma students.",
+      "repoUrl": "https://github.com/pabitra27706-oss/Diploma-2nd-sem",
+      "tech": ["HTML"],
+      "status": "completed"
+    }
+  ]
+}

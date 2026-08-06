@@ -1,0 +1,30 @@
+{
+  "topic": {
+    "id": "c-highest-number-among-3-numbers",
+    "title": "highest-number-among-3-numbers",
+    "language": "C",
+    "category": "If statement a little detail.",
+    "difficulty": "beginner",
+    "dateCreated": "2026-08-06T09:01:02Z",
+    "lastUpdated": "2026-08-06T09:01:02Z",
+    "tags": [
+      "if",
+      "else"
+    ],
+    "description": "To find the highest number among 3 numbers.",
+    "learningNotes": {
+      "whatILearned": "If statement in a little extrA.",
+      "challenges": "If statement condition create.",
+      "nextSteps": "I will learn the if statement in depth."
+    }
+  },
+  "files": [
+    {
+      "id": "file-001",
+      "fileName": "highest-number-among-3.c",
+      "filePath": "content/c/highest-number-among-3.c",
+      "description": "To find the highest number among 3 numbers.",
+      "dateAdded": "2026-08-06T09:01:02Z"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "topic": {
+    "id": "js-arrays",
+    "title": "JavaScript Arrays in Depth",
+    "language": "JavaScript",
+    "category": "Data Structures",
+    "difficulty": "intermediate",
+    "dateCreated": "2026-06-20T13:15:00Z",
+    "lastUpdated": "2026-06-20T13:15:00Z",
+    "tags": ["arrays", "map-filter-reduce", "sorting", "spread"],
+    "description": "JavaScript arrays beyond the basics: map/filter/reduce, searching helpers (includes, indexOf, find, findIndex), the string-based default sort pitfall with proper numeric comparators, destructuring and spread, plus arrays of objects - the shape real data usually has.",
+    "learningNotes": {
+      "whatILearned": "map/filter/reduce never mutate the original array, which makes code easier to reason about. Chaining them (filter then map) reads almost like a sentence. Spread [...] is the cleanest copy/merge tool.",
+      "challenges": "[100, 25, 7, 90].sort() returning [100, 25, 7, 90] in string order surprised me - numeric sorts always need (a, b) => a - b.",
+      "nextSteps": "Reducing to objects (grouping/frequencies), and combining array methods with fetch + JSON from an API."
+    }
+  },
+  "files": [
+    {
+      "id": "file-001",
+      "fileName": "arrays.js",
+      "filePath": "content/javascript/arrays.js",
+      "description": "map/filter/reduce on marks, searching methods, sort comparator demo, destructuring + spread, utility methods (join/slice/every/some/flat) and an array-of-objects toppers example.",
+      "dateAdded": "2026-06-20T13:15:00Z",
+      "lines": 66,
+      "size": "2.6KB"
+    }
+  ]
+}

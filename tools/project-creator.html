@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Project Creator — Learning Archive Tools</title>
+  <meta name="description" content="Minimalist generator for project entries. Upload projects.json once, then get the full rewritten file on every new project — with the GitHub repo link.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%234f7cff'/%3E%3Cpolyline points='24,20 12,32 24,44' fill='none' stroke='white' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpolyline points='40,20 52,32 40,44' fill='none' stroke='white' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../website/css/main.css">
+  <link rel="stylesheet" href="../website/css/components.css">
+  <link rel="stylesheet" href="../website/css/responsive.css">
+  <style>
+    .tool-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; align-items: start; }
+    @media (max-width: 1024px) { .tool-layout { grid-template-columns: 1fr; } }
+    .output-area {
+      width: 100%;
+      min-height: 300px;
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      line-height: 1.5;
+      padding: 14px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      background: var(--code-bg);
+      color: #abb2bf;
+      resize: vertical;
+      white-space: pre;
+    }
+    .idx-pill {
+      font-size: 0.72rem; font-weight: 700;
+      padding: 3px 11px; border-radius: 9999px;
+      background: var(--surface-2); color: var(--text-3);
+      border: 1px solid var(--border);
+      letter-spacing: 0.03em;
+      white-space: nowrap;
+    }
+    .idx-pill.on { background: var(--green-tint); color: var(--green); border-color: var(--green-border); }
+    .step-list { counter-reset: step; list-style: none; margin: 0; }
+    .step-list li { counter-increment: step; position: relative; padding-left: 34px; margin-bottom: 10px; color: var(--text-2); font-size: 0.9rem; }
+    .step-list li::before {
+      content: counter(step);
+      position: absolute; left: 0; top: 0;
+      width: 24px; height: 24px;
+      display: grid; place-items: center;
+      border-radius: 50%;
+      background: var(--primary-tint); color: var(--primary);
+      font-size: 0.75rem; font-weight: 700;
+    }
+    .check-row { display: flex; align-items: center; gap: 10px; }
+    .check-row input { width: 18px; height: 18px; accent-color: var(--primary); cursor: pointer; }
+  </style>
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem("theme");
+        if (t === "light") document.documentElement.setAttribute("data-theme", "light");
+        else document.documentElement.removeAttribute("data-theme");
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="nav container">
+      <a class="brand" href="../website/index.html">
+        <span class="brand-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="8 6 2 12 8 18"/><polyline points="16 6 22 12 16 18"/></svg></span>
+        <span class="brand-name">Learning Archive Tools</span>
+      </a>
+      <ul class="nav-links" id="navLinks" style="display:flex">
+        <li><a href="../website/projects.html">← Projects page</a></li>
+        <li><a href="json-creator.html">Topic Creator</a></li>
+        <li><button class="theme-toggle" id="themeToggle" aria-label="Toggle theme"></button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="page-main">
+
+    <section class="page-hero">
+      <div class="container">
+        <span class="section-eyebrow">Helper tool · minimalist</span>
+        <h1>Project Creator</h1>
+        <p>Add a project in under two minutes: name, repo link, tech, done. Upload your <code>data/projects.json</code> once — it's stored in this browser, and every new project produces the <strong>complete rewritten projects.json</strong>.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container tool-layout">
+
+        <!-- LEFT: form -->
+        <div>
+          <div class="side-card" style="padding:22px">
+            <h3 style="margin-bottom:16px">Project details</h3>
+
+            <div class="form-group">
+              <label for="p-name">Project name <span class="req">*</span></label>
+              <input class="form-control" id="p-name" placeholder="e.g. Attendance">
+            </div>
+
+            <div class="form-group">
+              <label for="p-repo">GitHub repository URL <span class="req">*</span></label>
+              <input class="form-control" id="p-repo" placeholder="https://github.com/pabitra27706-oss/my-project">
+            </div>
+
+            <div class="form-group">
+              <label for="p-live">Live demo URL <span class="muted" style="font-weight:400">(optional)</span></label>
+              <input class="form-control" id="p-live" placeholder="https://pabitra27706-oss.github.io/my-project/">
+            </div>
+
+            <div class="form-group">
+              <label for="p-desc">Description</label>
+              <textarea class="form-control" id="p-desc" style="min-height:80px" placeholder="One or two lines about what it does…"></textarea>
+            </div>
+
+            <div class="form-group">
+              <label for="p-tech">Tech (comma separated)</label>
+              <input class="form-control" id="p-tech" placeholder="HTML, CSS, JavaScript">
+            </div>
+
+            <div class="form-group">
+              <label for="p-highlights">Highlights <span class="muted" style="font-weight:400">(optional, one per line)</span></label>
+              <textarea class="form-control" id="p-highlights" style="min-height:70px" placeholder="Won Hackathon 2026&#10;Used by 40+ classmates"></textarea>
+            </div>
+
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:end">
+              <div class="form-group" style="margin-bottom:0">
+                <label for="p-status">Status</label>
+                <select class="form-control" id="p-status">
+                  <option value="live">live</option>
+                  <option value="in-progress">in-progress</option>
+                  <option value="completed" selected>completed</option>
+                  <option value="paused">paused</option>
+                </select>
+              </div>
+              <div class="form-group" style="margin-bottom:0">
+                <label style="margin-bottom:10px">Featured</label>
+                <div class="check-row">
+                  <input type="checkbox" id="p-featured">
+                  <span class="form-hint" style="margin:0">Shows first on the page</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div style="display:flex;gap:10px;flex-wrap:wrap" class="mt-2">
+            <button class="btn btn-primary btn-lg" id="generateBtn" type="button">⚡ Generate</button>
+            <button class="btn btn-ghost" id="clearFormBtn" type="button">Clear form</button>
+          </div>
+        </div>
+
+        <!-- RIGHT: manager + output -->
+        <div>
+
+          <div class="side-card" style="padding:22px">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;flex-wrap:wrap;gap:8px">
+              <h3 style="margin:0">0 · projects.json Manager</h3>
+              <span class="idx-pill" id="prjStatusPill">No file loaded</span>
+            </div>
+            <p class="form-hint" id="prjStatusText" style="margin-bottom:14px"></p>
+            <div style="display:flex;gap:8px;flex-wrap:wrap">
+              <label class="btn btn-secondary btn-sm" for="prjFile" style="cursor:pointer">Upload projects.json</label>
+              <input type="file" id="prjFile" accept=".json,application/json" hidden>
+              <button class="btn btn-ghost btn-sm" id="prjPasteToggle" type="button">Paste instead</button>
+              <button class="btn btn-ghost btn-sm hidden" id="prjRemoveBtn" type="button" style="color:var(--red)">Remove stored</button>
+            </div>
+            <div id="prjPasteBox" class="hidden" style="margin-top:12px">
+              <textarea class="form-control" id="prjPasteArea" placeholder="Paste the full contents of data/projects.json here…" style="min-height:120px;font-family:var(--font-mono);font-size:0.75rem"></textarea>
+              <button class="btn btn-secondary btn-sm mt-1" id="prjPasteLoad" type="button">Load from pasted text</button>
+            </div>
+          </div>
+
+          <div class="side-card mt-2" style="padding:22px">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;flex-wrap:wrap;gap:8px">
+              <h3 style="margin:0" id="prjOutputTitle">1 · projects.json</h3>
+              <div style="display:flex;gap:8px">
+                <button class="btn btn-sm btn-secondary" id="copyPrjBtn" type="button">Copy</button>
+                <button class="btn btn-sm btn-download hidden" id="downloadPrjBtn" type="button">Download projects.json</button>
+              </div>
+            </div>
+            <p class="form-hint mb-1" id="prjOutputHint"></p>
+            <textarea class="output-area" id="prjOutput" readonly placeholder="Generated JSON will appear here…"></textarea>
+          </div>
+
+          <div class="side-card mt-2" style="padding:22px">
+            <h3 style="margin-bottom:14px">Then finish the loop</h3>
+            <ol class="step-list">
+              <li>Replace <code>data/projects.json</code> with the file above.</li>
+              <li><code>git add data/projects.json && git commit -m "Added project: &lt;name&gt;" && git push</code></li>
+              <li>Live on the Projects page in ~2 minutes. 🚀</li>
+            </ol>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-bottom">
+      <span>Learning Archive · Project Creator Tool</span>
+      <span><a href="../website/index.html">← Back to the website</a></span>
+    </div>
+  </footer>
+
+  <script>
+  (function () {
+    "use strict";
+
+    const LS_KEY = "arcProjectsJson";
+    let savedProjects = null;
+
+    const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+    const slugify = (s) => String(s).toLowerCase().trim().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
+    const nowISO = () => new Date().toISOString().replace(/\.\d{3}Z$/, "Z");
+    const todayDate = () => nowISO().slice(0, 10);
+
+    /* ================= projects.json manager ================= */
+
+    function saveToLS(obj) {
+      try { localStorage.setItem(LS_KEY, JSON.stringify(obj)); } catch (e) { /* quota */ }
+    }
+
+    function renderStatus() {
+      const pill = document.getElementById("prjStatusPill");
+      const text = document.getElementById("prjStatusText");
+      const removeBtn = document.getElementById("prjRemoveBtn");
+      if (savedProjects) {
+        const n = (savedProjects.projects || []).length;
+        pill.textContent = "Loaded ✓";
+        pill.classList.add("on");
+        text.innerHTML = `Storing <b>${n}</b> project${n === 1 ? "" : "s"} · last updated <code>${esc(savedProjects.metadata?.lastUpdated || "—")}</code>. Every generate merges the new project in and rewrites this stored copy.`;
+        removeBtn.classList.remove("hidden");
+      } else {
+        pill.textContent = "No file loaded";
+        pill.classList.remove("on");
+        text.innerHTML = `Upload your current <code>data/projects.json</code> once — it's stored in this browser (localStorage). From then on, generating a project gives you the <b>full rewritten projects.json</b> automatically.`;
+        removeBtn.classList.add("hidden");
+      }
+    }
+
+    function adopt(parsed) {
+      if (!parsed || typeof parsed !== "object" || Array.isArray(parsed) || !Array.isArray(parsed.projects)) {
+        throw new Error('that does not look like projects.json (missing the "projects" array)');
+      }
+      if (!parsed.metadata || typeof parsed.metadata !== "object") parsed.metadata = {};
+      savedProjects = parsed;
+      saveToLS(parsed);
+      renderStatus();
+    }
+
+    function loadSaved() {
+      try {
+        const raw = localStorage.getItem(LS_KEY);
+        if (raw) adopt(JSON.parse(raw));
+      } catch (e) { savedProjects = null; }
+      renderStatus();
+    }
+
+    document.getElementById("prjFile").addEventListener("change", (e) => {
+      const file = e.target.files[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = () => {
+        try { adopt(JSON.parse(reader.result)); }
+        catch (err) { alert("Could not load projects.json: " + err.message); }
+      };
+      reader.readAsText(file);
+      e.target.value = "";
+    });
+
+    document.getElementById("prjPasteToggle").addEventListener("click", () => {
+      document.getElementById("prjPasteBox").classList.toggle("hidden");
+    });
+    document.getElementById("prjPasteLoad").addEventListener("click", () => {
+      const raw = document.getElementById("prjPasteArea").value.trim();
+      if (!raw) { alert("Paste your projects.json contents first."); return; }
+      try { adopt(JSON.parse(raw)); document.getElementById("prjPasteBox").classList.add("hidden"); }
+      catch (err) { alert("Could not parse: " + err.message); }
+    });
+    document.getElementById("prjRemoveBtn").addEventListener("click", () => {
+      if (!confirm("Remove the stored projects.json from this browser? (Your repo file is not touched.)")) return;
+      savedProjects = null;
+      localStorage.removeItem(LS_KEY);
+      renderStatus();
+    });
+    document.getElementById("downloadPrjBtn").addEventListener("click", () => {
+      if (!savedProjects) return;
+      const blob = new Blob([JSON.stringify(savedProjects, null, 2)], { type: "application/json" });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url; a.download = "projects.json";
+      document.body.appendChild(a); a.click(); a.remove();
+      setTimeout(() => URL.revokeObjectURL(url), 4000);
+    });
+
+    /* ================= theme toggle ================= */
+
+    const themeBtn = document.getElementById("themeToggle");
+    if (themeBtn) {
+      const sunSVG = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>';
+      const moonSVG = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+      const sync = () => {
+        themeBtn.innerHTML = document.documentElement.getAttribute("data-theme") === "light" ? moonSVG : sunSVG;
+      };
+      themeBtn.addEventListener("click", () => {
+        const light = document.documentElement.getAttribute("data-theme") === "light";
+        if (light) { document.documentElement.removeAttribute("data-theme"); localStorage.setItem("theme", "dark"); }
+        else { document.documentElement.setAttribute("data-theme", "light"); localStorage.setItem("theme", "light"); }
+        sync();
+      });
+      sync();
+    }
+
+    /* ================= generation ================= */
+
+    function generate() {
+      const name = document.getElementById("p-name").value.trim();
+      const repoUrl = document.getElementById("p-repo").value.trim();
+      const liveUrl = document.getElementById("p-live").value.trim();
+      const description = document.getElementById("p-desc").value.trim();
+      const tech = document.getElementById("p-tech").value.split(",").map((t) => t.trim()).filter(Boolean);
+      const highlights = document.getElementById("p-highlights").value.split("\n").map((h) => h.trim()).filter(Boolean);
+      const status = document.getElementById("p-status").value;
+      const featured = document.getElementById("p-featured").checked;
+
+      if (!name) { alert("Please enter a project name."); return null; }
+      if (!repoUrl) { alert("Every project needs a GitHub repository URL."); return null; }
+      if (!/^https?:\/\//.test(repoUrl)) { alert("Repository URL must start with https:// (e.g. https://github.com/pabitra27706-oss/my-project)"); return null; }
+      if (liveUrl && !/^https?:\/\//.test(liveUrl)) { alert("Live URL must start with https://"); return null; }
+
+      const entry = {
+        id: slugify(name),
+        name,
+        description,
+        repoUrl,
+        tech,
+        status,
+        featured,
+        dateAdded: todayDate()
+      };
+      if (liveUrl) entry.liveUrl = liveUrl;
+      if (highlights.length) entry.highlights = highlights;
+      return entry;
+    }
+
+    document.getElementById("generateBtn").addEventListener("click", () => {
+      const entry = generate();
+      if (!entry) return;
+
+      const titleEl = document.getElementById("prjOutputTitle");
+      const hintEl = document.getElementById("prjOutputHint");
+      const dlBtn = document.getElementById("downloadPrjBtn");
+      const outputEl = document.getElementById("prjOutput");
+
+      if (savedProjects) {
+        const existingIdx = savedProjects.projects.findIndex((p) => p.id === entry.id);
+        if (existingIdx !== -1) {
+          const ok = confirm(`A project with id "${entry.id}" already exists in your loaded projects.json.\n\nOK = replace it with this one.\nCancel = abort.`);
+          if (!ok) return;
+          savedProjects.projects.splice(existingIdx, 1);
+        }
+        const updated = JSON.parse(JSON.stringify(savedProjects));
+        updated.projects = [entry, ...updated.projects];
+        updated.metadata.totalProjects = updated.projects.length;
+        updated.metadata.lastUpdated = nowISO();
+        savedProjects = updated;
+        saveToLS(updated);          /* rewrite localStorage with the new project */
+        renderStatus();
+
+        outputEl.value = JSON.stringify(updated, null, 2);
+        titleEl.textContent = "1 · Updated projects.json (full file)";
+        hintEl.innerHTML = `Your <b>complete rewritten projects.json</b> — new project merged in, counts fixed, stored copy updated. Download it and replace <code>data/projects.json</code>.`;
+        dlBtn.classList.remove("hidden");
+      } else {
+        outputEl.value = JSON.stringify(entry, null, 2);
+        titleEl.textContent = "1 · Project entry";
+        hintEl.innerHTML = `Paste inside the <code>"projects": [ … ]</code> array of <code>data/projects.json</code> and bump <code>totalProjects</code> + <code>lastUpdated</code>. <b>Tip:</b> upload your projects.json above to get full automatic rewrites.`;
+        dlBtn.classList.add("hidden");
+      }
+    });
+
+    /* ================= copy / clear ================= */
+
+    document.getElementById("copyPrjBtn").addEventListener("click", async (e) => {
+      const btn = e.target;
+      const text = document.getElementById("prjOutput").value;
+      if (!text) { alert("Generate first."); return; }
+      try {
+        await navigator.clipboard.writeText(text);
+        const old = btn.textContent;
+        btn.textContent = "Copied!";
+        setTimeout(() => { btn.textContent = old; }, 1500);
+      } catch (err) {
+        document.getElementById("prjOutput").select();
+        document.execCommand("copy");
+      }
+    });
+
+    document.getElementById("clearFormBtn").addEventListener("click", () => {
+      document.querySelectorAll("#p-name,#p-repo,#p-live,#p-desc,#p-tech,#p-highlights").forEach((el) => { el.value = ""; });
+      document.getElementById("p-status").value = "completed";
+      document.getElementById("p-featured").checked = false;
+      document.getElementById("prjOutput").value = "";
+      /* the stored projects.json is intentionally kept */
+      renderStatus();
+    });
+
+    /* ================= boot ================= */
+    loadSaved();
+  })();
+  </script>
+</body>
+</html>

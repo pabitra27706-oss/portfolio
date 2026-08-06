@@ -1,0 +1,30 @@
+{
+  "topic": {
+    "id": "c-simple-multiplication",
+    "title": "simple-multiplication",
+    "language": "C",
+    "category": "Logic building",
+    "difficulty": "beginner",
+    "dateCreated": "2026-08-05T16:26:33Z",
+    "lastUpdated": "2026-08-05T16:26:33Z",
+    "tags": [
+      "multiplication",
+      "for-loop"
+    ],
+    "description": "How to multiply numbers",
+    "learningNotes": {
+      "whatILearned": "This was great i learn a lot about how %d works.",
+      "challenges": "I couldn't set the \"Enter number 1/2/3..:\" at first and also make mistakes at multiply function.",
+      "nextSteps": "I will learn more and create more."
+    }
+  },
+  "files": [
+    {
+      "id": "file-001",
+      "fileName": "simple-multiplication.c",
+      "filePath": "content/c/simple-multiplication.c",
+      "description": "How to multiply numbers",
+      "dateAdded": "2026-08-05T16:26:33Z"
+    }
+  ]
+}

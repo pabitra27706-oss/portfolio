@@ -1,0 +1,30 @@
+{
+  "topic": {
+    "id": "c-count-bassed-sum-c",
+    "title": "count_bassed_sum.c",
+    "language": "C",
+    "category": "Understanding of c",
+    "difficulty": "beginner",
+    "dateCreated": "2026-08-05T15:34:56Z",
+    "lastUpdated": "2026-08-05T15:34:56Z",
+    "tags": [
+      "for-loops",
+      "arithmetic-expressions"
+    ],
+    "description": "It a simple project to get some of numbers with a finite known numbers.",
+    "learningNotes": {
+      "whatILearned": "How the c works and a little looping concept",
+      "challenges": "I forgot to give ; in 2 lines, i use ai for help to dig up idea.",
+      "nextSteps": "Try to do with other operators."
+    }
+  },
+  "files": [
+    {
+      "id": "file-001",
+      "fileName": "count_bassed_sum.c",
+      "filePath": "content/c/count_bassed_sum.c",
+      "description": "Sum of n numbers",
+      "dateAdded": "2026-08-05T15:34:56Z"
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "metadata": {
+    "siteName": "Learning Archive",
+    "lastUpdated": "2026-08-06T10:13:24Z",
+    "firstEntryDate": "2026-01-08",
+    "totalTopics": 6,
+    "totalFiles": 6,
+    "languages": [
+      "C",
+      "Python",
+      "JavaScript"
+    ]
+  },
+  "topics": [
+    {
+      "id": "c-leap-year-finder",
+      "title": "leap-year finder",
+      "language": "C",
+      "dateCreated": "2026-08-06",
+      "lastUpdated": "2026-08-06",
+      "fileCount": 1,
+      "tags": [
+        "if",
+        "else",
+        "else-if"
+      ],
+      "description": "Any can find if a year is leap-year or not.",
+      "topicFile": "data/topics/c/leap-year-finder.json"
+    },
+    {
+      "id": "c-highest-number-among-3-numbers",
+      "title": "highest-number-among-3-numbers",
+      "language": "C",
+      "dateCreated": "2026-08-06",
+      "lastUpdated": "2026-08-06",
+      "fileCount": 1,
+      "tags": [
+        "if",
+        "else"
+      ],
+      "description": "To find the highest number among 3 numbers.",
+      "topicFile": "data/topics/c/highest-number-among-3-numbers.json"
+    },
+    {
+      "id": "c-divider",
+      "title": "divider",
+      "language": "C",
+      "dateCreated": "2026-08-06",
+      "lastUpdated": "2026-08-06",
+      "fileCount": 1,
+      "tags": [
+        "arithmetic-operation"
+      ],
+      "description": "Didier of 2 integer numbers.",
+      "topicFile": "data/topics/c/divider.json"
+    },
+    {
+      "id": "c-simple-subtraction",
+      "title": "simple-subtraction",
+      "language": "C",
+      "dateCreated": "2026-08-06",
+      "lastUpdated": "2026-08-06",
+      "fileCount": 1,
+      "tags": [
+        "arithmetic-operation"
+      ],
+      "description": "It simply subtract 2 digits.",
+      "topicFile": "data/topics/c/simple-subtraction.json"
+    },
+    {
+      "id": "c-simple-multiplication",
+      "title": "simple-multiplication",
+      "language": "C",
+      "dateCreated": "2026-08-05",
+      "lastUpdated": "2026-08-05",
+      "fileCount": 1,
+      "tags": [
+        "multiplication",
+        "for-loop"
+      ],
+      "description": "How to multiply numbers",
+      "topicFile": "data/topics/c/simple-multiplication.json"
+    },
+    {
+      "id": "c-count-bassed-sum-c",
+      "title": "count_bassed_sum.c",
+      "language": "C",
+      "dateCreated": "2026-08-05",
+      "lastUpdated": "2026-08-05",
+      "fileCount": 1,
+      "tags": [
+        "for-loops",
+        "arithmetic-expressions"
+      ],
+      "description": "It a simple project to get some of numbers with a finite known numbers.",
+      "topicFile": "data/topics/c/count_bassed_sum.json"
+    }
+  ]
+}

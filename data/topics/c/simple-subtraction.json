@@ -1,0 +1,29 @@
+{
+  "topic": {
+    "id": "c-simple-subtraction",
+    "title": "simple-subtraction",
+    "language": "C",
+    "category": "Subtraction useing c",
+    "difficulty": "beginner",
+    "dateCreated": "2026-08-06T05:24:02Z",
+    "lastUpdated": "2026-08-06T05:24:02Z",
+    "tags": [
+      "arithmetic-operation"
+    ],
+    "description": "It simply subtract 2 digits.",
+    "learningNotes": {
+      "whatILearned": "It was easy but i can't apply loop i will make it latter.",
+      "challenges": "Loops i can't apply.",
+      "nextSteps": "I will learn loops more deeply."
+    }
+  },
+  "files": [
+    {
+      "id": "file-001",
+      "fileName": "simple-subtraction.c",
+      "filePath": "content/c/simple-subtraction.c",
+      "description": "Subtraction 2 numbers.",
+      "dateAdded": "2026-08-06T05:24:02Z"
+    }
+  ]
+}

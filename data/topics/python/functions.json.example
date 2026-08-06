@@ -1,0 +1,29 @@
+{
+  "topic": {
+    "id": "python-functions",
+    "title": "Functions in Python",
+    "language": "Python",
+    "category": "Fundamentals",
+    "difficulty": "beginner",
+    "dateCreated": "2026-03-05T17:10:00Z",
+    "lastUpdated": "2026-03-05T17:10:00Z",
+    "tags": ["functions", "lambda", "arguments", "scope"],
+    "description": "Functions from every angle: definitions with docstrings, default parameters, multiple return values via tuple unpacking, *args and **kwargs, lambda functions, map/filter, functions as first-class objects, and local vs global scope.",
+    "learningNotes": {
+      "whatILearned": "A function can return several values at once by returning a tuple, and *args/**kwargs let a function accept any number of arguments. Passing functions to other functions (first-class) felt strange at first but is the basis of map/filter.",
+      "challenges": "Remembering the order of parameters: normal, defaults, *args, **kwargs. Also, lambda functions are limited to one expression.",
+      "nextSteps": "Decorators and generators - the next level of Python functions."
+    }
+  },
+  "files": [
+    {
+      "id": "file-001",
+      "fileName": "functions.py",
+      "filePath": "content/python/functions.py",
+      "description": "greet/power/divide examples, *args/**kwargs summary function, lambdas, map/filter over a marks list, apply() showing first-class functions, and a scope demo.",
+      "dateAdded": "2026-03-05T17:10:00Z",
+      "lines": 83,
+      "size": "2.2KB"
+    }
+  ]
+}
