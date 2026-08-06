@@ -4,65 +4,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>JSON Creator — Learning Archive Tool</title>
-  <meta name="description" content="Form-based generator that produces valid topic JSON and rewrites your full index.json automatically, with localStorage persistence.">
+  <meta name="description" content="Advanced form-based JSON generator with smart suggestions, file detection, and auto-rewriting index.json">
+  
+  <!-- Favicon -->
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%234f7cff'/%3E%3Cpolyline points='24,20 12,32 24,44' fill='none' stroke='white' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpolyline points='40,20 52,32 40,44' fill='none' stroke='white' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheets -->
   <link rel="stylesheet" href="../website/css/main.css">
   <link rel="stylesheet" href="../website/css/components.css">
   <link rel="stylesheet" href="../website/css/responsive.css">
-  <style>
-    .tool-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; align-items: start; }
-    @media (max-width: 1024px) { .tool-layout { grid-template-columns: 1fr; } }
-    .file-row-builder {
-      border: 1px dashed var(--border);
-      border-radius: var(--radius-lg);
-      padding: 14px;
-      margin-bottom: 10px;
-      position: relative;
-      background: var(--surface-1);
-    }
-    .file-row-builder .remove-file {
-      position: absolute; top: 8px; right: 8px;
-      border: none; background: transparent; color: var(--red);
-      font-size: 1.1rem; cursor: pointer; line-height: 1;
-    }
-    .output-area {
-      width: 100%;
-      min-height: 260px;
-      font-family: var(--font-mono);
-      font-size: 0.78rem;
-      line-height: 1.5;
-      padding: 14px;
-      border: 1px solid var(--border);
-      border-radius: var(--radius-lg);
-      background: var(--code-bg);
-      color: #abb2bf;
-      resize: vertical;
-      white-space: pre;
-    }
-    .step-list { counter-reset: step; list-style: none; margin: 0; }
-    .step-list li { counter-increment: step; position: relative; padding-left: 34px; margin-bottom: 10px; color: var(--text-2); font-size: 0.9rem; }
-    .step-list li::before {
-      content: counter(step);
-      position: absolute; left: 0; top: 0;
-      width: 24px; height: 24px;
-      display: grid; place-items: center;
-      border-radius: 50%;
-      background: var(--primary-tint); color: var(--primary);
-      font-size: 0.75rem; font-weight: 700;
-    }
-    .idx-pill {
-      font-size: 0.72rem; font-weight: 700;
-      padding: 3px 11px; border-radius: 9999px;
-      background: var(--surface-2); color: var(--text-3);
-      border: 1px solid var(--border);
-      letter-spacing: 0.03em;
-      white-space: nowrap;
-    }
-    .idx-pill.on { background: var(--green-tint); color: var(--green); border-color: var(--green-border); }
-  </style>
+  <link rel="stylesheet" href="creator.css">
+  
+  <!-- Theme Script (must run before body) -->
   <script>
     (function () {
       try {
@@ -75,10 +33,15 @@
 </head>
 <body>
 
+  <!-- ========== HEADER ========== -->
   <header class="site-header">
     <nav class="nav container">
       <a class="brand" href="../website/index.html">
-        <span class="brand-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="8 6 2 12 8 18"/><polyline points="16 6 22 12 16 18"/></svg></span>
+        <span class="brand-mark">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="8 6 2 12 8 18"/><polyline points="16 6 22 12 16 18"/>
+          </svg>
+        </span>
         <span class="brand-name">Learning Archive Tools</span>
       </a>
       <ul class="nav-links" id="navLinks" style="display:flex">
@@ -88,160 +51,245 @@
     </nav>
   </header>
 
+  <!-- ========== MAIN ========== -->
   <main class="page-main">
 
+    <!-- Hero Section -->
     <section class="page-hero">
       <div class="container">
-        <span class="section-eyebrow">Helper tool</span>
-        <h1>JSON Creator</h1>
-        <p>Fill the form, get perfectly valid JSON. Upload your <code>index.json</code> once — it's stored in this browser, and from then on every new topic produces the <strong>complete rewritten index.json</strong> automatically. No manual pasting, no count errors.</p>
+        <span class="section-eyebrow">Helper tool v2.0</span>
+        <h1>JSON Creator <span class="hero-badge">Enhanced</span></h1>
+        <p>Drop your code file, pick a template, select tags from massive library — get perfectly valid JSON. Upload your <code>index.json</code> once and every new topic produces the <strong>complete rewritten file</strong> automatically.</p>
       </div>
     </section>
 
+    <!-- Tool Section -->
     <section class="section">
       <div class="container tool-layout">
 
-        <!-- LEFT: form -->
-        <div>
-          <div class="side-card" style="padding:22px">
-            <h3 style="margin-bottom:16px">Topic details</h3>
+        <!-- ========== LEFT COLUMN: FORM ========== -->
+        <div class="form-column">
 
-            <div class="form-group">
-              <label for="t-title">Topic title <span class="req">*</span></label>
-              <input class="form-control" id="t-title" placeholder="e.g. Pointers in C">
+          <!-- File Auto-Detector -->
+          <div class="side-card file-detector-card">
+            <h3>📁 File Auto-Detector</h3>
+            <p class="form-hint mb-1">Drop or upload your code file to auto-detect language and fill file details</p>
+            
+            <div class="drop-zone" id="dropZone">
+              <svg class="drop-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                <polyline points="17 8 12 3 7 8"/>
+                <line x1="12" y1="3" x2="12" y2="15"/>
+              </svg>
+              <p class="drop-text">Drag & drop your code file here</p>
+              <p class="drop-subtext">or</p>
+              <label class="btn btn-secondary btn-sm" for="fileInput">Browse file</label>
+              <input type="file" id="fileInput" accept=".c,.py,.js,.java,.sql,.html,.css,.h,.cpp,.jsx,.ts,.tsx" hidden>
             </div>
 
-            <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
-              <div class="form-group">
-                <label for="t-lang">Language <span class="req">*</span></label>
-                <select class="form-control" id="t-lang">
-                  <option value="C">C</option>
-                  <option value="Python">Python</option>
-                  <option value="JavaScript">JavaScript</option>
-                  <option value="Java">Java</option>
-                  <option value="SQL">SQL</option>
-                  <option value="HTML/CSS">HTML/CSS</option>
-                  <option value="Other">Other</option>
-                </select>
+            <div class="detected-info hidden" id="detectedInfo">
+              <div class="detected-badge">
+                <span class="badge-label">Detected:</span>
+                <span class="badge-lang" id="detectedLang">—</span>
+                <span class="badge-file" id="detectedFile">—</span>
               </div>
-              <div class="form-group">
-                <label for="t-diff">Difficulty</label>
-                <select class="form-control" id="t-diff">
-                  <option value="beginner">beginner</option>
-                  <option value="intermediate">intermediate</option>
-                  <option value="advanced">advanced</option>
-                </select>
-              </div>
-            </div>
-
-            <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
-              <div class="form-group">
-                <label for="t-cat">Category</label>
-                <input class="form-control" id="t-cat" placeholder="e.g. Data Structures">
-              </div>
-              <div class="form-group">
-                <label for="t-id">Topic ID (auto)</label>
-                <input class="form-control" id="t-id" placeholder="c-pointers">
-                <p class="form-hint">Used in URLs and ZIP folder names.</p>
-              </div>
-            </div>
-
-            <div class="form-group">
-              <label for="t-tags">Tags (comma separated)</label>
-              <input class="form-control" id="t-tags" placeholder="pointers, memory, advanced">
-            </div>
-
-            <div class="form-group">
-              <label for="t-desc">Description <span class="req">*</span></label>
-              <textarea class="form-control" id="t-desc" placeholder="What this topic covers…"></textarea>
-            </div>
-
-            <div class="form-group">
-              <label for="t-learned">What I learned</label>
-              <textarea class="form-control" id="t-learned" style="min-height:70px"></textarea>
-            </div>
-            <div class="form-group">
-              <label for="t-challenges">Challenges faced</label>
-              <textarea class="form-control" id="t-challenges" style="min-height:70px"></textarea>
-            </div>
-            <div class="form-group">
-              <label for="t-next">Next steps</label>
-              <textarea class="form-control" id="t-next" style="min-height:70px"></textarea>
+              <button class="btn-clear-detection" id="clearDetection" type="button">× Clear</button>
             </div>
           </div>
 
-          <div class="side-card mt-2" style="padding:22px">
-            <h3 style="margin-bottom:16px">Files</h3>
+          <!-- Topic Details -->
+          <div class="side-card mt-2">
+            <h3>Topic Details</h3>
+
+            <!-- Language Selector -->
+            <div class="form-group">
+              <label for="langSelect">Language <span class="req">*</span></label>
+              <select class="form-control" id="langSelect">
+                <option value="C">C</option>
+                <option value="Python">Python</option>
+                <option value="JavaScript">JavaScript</option>
+                <option value="Java">Java</option>
+                <option value="SQL">SQL</option>
+                <option value="HTML/CSS">HTML/CSS</option>
+              </select>
+            </div>
+
+            <!-- Topic Templates -->
+            <div class="form-group">
+              <label>Quick Pick Topic Template</label>
+              <p class="form-hint mb-1">Select a template to auto-fill form with suggestions</p>
+              <div class="topic-templates" id="topicTemplates">
+                <!-- Dynamically populated -->
+              </div>
+            </div>
+
+            <!-- Title -->
+            <div class="form-group">
+              <label for="topicTitle">Topic Title <span class="req">*</span></label>
+              <input class="form-control" id="topicTitle" type="text" placeholder="e.g. If-Else Statement in C">
+              <div class="field-error hidden" id="titleError"></div>
+            </div>
+
+            <!-- Category & Difficulty -->
+            <div class="form-row">
+              <div class="form-group">
+                <label for="topicCategory">Category</label>
+                <select class="form-control" id="topicCategory">
+                  <!-- Dynamically populated -->
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="topicDifficulty">Difficulty</label>
+                <select class="form-control" id="topicDifficulty">
+                  <option value="beginner">Beginner</option>
+                  <option value="intermediate">Intermediate</option>
+                  <option value="advanced">Advanced</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Topic ID (auto) -->
+            <div class="form-group">
+              <label for="topicId">Topic ID <span class="badge-auto">auto</span></label>
+              <input class="form-control" id="topicId" type="text" placeholder="c-if-else">
+              <p class="form-hint">Used in URLs and folder names. Auto-generated from title.</p>
+            </div>
+          </div>
+
+          <!-- Tags Section -->
+          <div class="side-card mt-2">
+            <h3>🏷️ Tags</h3>
+            <p class="form-hint mb-1">Click to select/deselect. Add custom tags below.</p>
+
+            <!-- Tag Suggestions -->
+            <div class="tag-suggestions" id="tagSuggestions">
+              <!-- Dynamically populated pills -->
+            </div>
+
+            <!-- Selected Tags Display -->
+            <div class="selected-tags-wrap">
+              <label class="tag-section-label">Selected Tags</label>
+              <div class="selected-tags" id="selectedTags">
+                <span class="no-tags-msg">No tags selected</span>
+              </div>
+            </div>
+
+            <!-- Custom Tags Input -->
+            <div class="form-group mt-1">
+              <label for="customTags">Custom Tags (comma separated)</label>
+              <input class="form-control" id="customTags" type="text" placeholder="custom-tag, another-tag">
+            </div>
+          </div>
+
+          <!-- Description & Notes -->
+          <div class="side-card mt-2">
+            <h3>Description & Learning Notes</h3>
+
+            <div class="form-group">
+              <label for="topicDesc">Description <span class="req">*</span></label>
+              <div class="desc-actions" id="descActions">
+                <button class="btn-use-starter hidden" id="useDescStarter" type="button">✨ Use starter text</button>
+              </div>
+              <textarea class="form-control" id="topicDesc" rows="4" placeholder="What does this topic cover? What will I learn?"></textarea>
+              <div class="field-error hidden" id="descError"></div>
+            </div>
+
+            <div class="form-group">
+              <label for="whatLearned">What I Learned</label>
+              <textarea class="form-control" id="whatLearned" rows="3" placeholder="Key takeaways and insights..."></textarea>
+            </div>
+
+            <div class="form-group">
+              <label for="challenges">Challenges Faced</label>
+              <textarea class="form-control" id="challenges" rows="3" placeholder="Difficulties encountered and how I overcame them..."></textarea>
+            </div>
+
+            <div class="form-group">
+              <label for="nextSteps">Next Steps</label>
+              <textarea class="form-control" id="nextSteps" rows="3" placeholder="What to study next..."></textarea>
+            </div>
+          </div>
+
+          <!-- Files Section -->
+          <div class="side-card mt-2">
+            <h3>Files</h3>
             <div id="fileRows"></div>
-            <button class="btn btn-secondary btn-sm" id="addFileBtn" type="button">+ Add another file</button>
-            <p class="form-hint mt-1">Save the actual code in <code>content/&lt;language&gt;/</code> first, then reference the path here (e.g. <code>content/c/loops.c</code>).</p>
+            <button class="btn btn-secondary btn-sm mt-1" id="addFileBtn" type="button">+ Add another file</button>
+            <p class="form-hint mt-1">File paths are auto-generated based on file name and language.</p>
           </div>
 
-          <div style="display:flex;gap:10px;flex-wrap:wrap" class="mt-2">
-            <button class="btn btn-primary btn-lg" id="generateBtn" type="button">⚡ Generate JSON</button>
-            <button class="btn btn-secondary" id="loadSampleBtn" type="button">Load sample</button>
-            <button class="btn btn-ghost" id="clearFormBtn" type="button">Clear form</button>
+          <!-- Action Buttons -->
+          <div class="form-actions mt-2">
+            <button class="btn btn-primary btn-lg" id="generateBtn" type="button">
+              <span class="btn-text">⚡ Generate JSON</span>
+              <span class="btn-loader hidden">Generating...</span>
+            </button>
+            <button class="btn btn-secondary" id="loadSampleBtn" type="button">Load Sample</button>
+            <button class="btn btn-ghost" id="clearFormBtn" type="button">Clear Form</button>
           </div>
+
         </div>
 
-        <!-- RIGHT: index manager + outputs -->
-        <div>
+        <!-- ========== RIGHT COLUMN: OUTPUTS ========== -->
+        <div class="output-column">
 
-          <!-- 0 · index.json manager -->
-          <div class="side-card" style="padding:22px">
-            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;flex-wrap:wrap;gap:8px">
-              <h3 style="margin:0">0 · index.json Manager</h3>
-              <span class="idx-pill" id="idxStatusPill">No index loaded</span>
+          <!-- Index Manager -->
+          <div class="side-card">
+            <div class="card-header">
+              <h3>0 · index.json Manager</h3>
+              <span class="status-pill" id="indexStatusPill">Not loaded</span>
             </div>
-            <p class="form-hint" id="idxStatusText" style="margin-bottom:14px"></p>
-            <div style="display:flex;gap:8px;flex-wrap:wrap">
-              <label class="btn btn-secondary btn-sm" for="idxFile" style="cursor:pointer">Upload index.json</label>
-              <input type="file" id="idxFile" accept=".json,application/json" hidden>
-              <button class="btn btn-ghost btn-sm" id="idxPasteToggle" type="button">Paste instead</button>
-              <button class="btn btn-ghost btn-sm hidden" id="idxRemoveBtn" type="button" style="color:var(--red)">Remove stored</button>
+            <p class="status-text" id="indexStatusText"></p>
+            <div class="index-actions">
+              <label class="btn btn-secondary btn-sm" for="indexFile">Upload index.json</label>
+              <input type="file" id="indexFile" accept=".json,application/json" hidden>
+              <button class="btn btn-ghost btn-sm" id="indexPasteToggle" type="button">Paste instead</button>
+              <button class="btn btn-ghost btn-sm hidden" id="indexRemoveBtn" type="button">Remove stored</button>
             </div>
-            <div id="idxPasteBox" class="hidden" style="margin-top:12px">
-              <textarea class="form-control" id="idxPasteArea" placeholder="Paste the full contents of data/index.json here…" style="min-height:120px;font-family:var(--font-mono);font-size:0.75rem"></textarea>
-              <button class="btn btn-secondary btn-sm mt-1" id="idxPasteLoad" type="button">Load from pasted text</button>
+            <div class="paste-box hidden" id="indexPasteBox">
+              <textarea class="form-control" id="indexPasteArea" rows="6" placeholder="Paste your index.json contents here..."></textarea>
+              <button class="btn btn-secondary btn-sm mt-1" id="indexPasteLoad" type="button">Load from pasted text</button>
             </div>
           </div>
 
-          <!-- 1 · topic JSON -->
-          <div class="side-card mt-2" style="padding:22px">
-            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;flex-wrap:wrap;gap:8px">
-              <h3 style="margin:0">1 · Topic JSON</h3>
-              <div style="display:flex;gap:8px">
+          <!-- Topic JSON Output -->
+          <div class="side-card mt-2">
+            <div class="card-header">
+              <h3>1 · Topic JSON</h3>
+              <div class="output-actions">
                 <button class="btn btn-sm btn-secondary" id="copyTopicBtn" type="button">Copy</button>
-                <button class="btn btn-sm btn-secondary" id="downloadTopicBtn" type="button">Download .json</button>
+                <button class="btn btn-sm btn-secondary" id="downloadTopicBtn" type="button">Download</button>
               </div>
             </div>
             <p class="form-hint mb-1">Save as <code>data/topics/&lt;language&gt;/&lt;name&gt;.json</code></p>
-            <textarea class="output-area" id="topicOutput" readonly placeholder="Topic JSON will appear here…"></textarea>
+            <textarea class="output-area" id="topicOutput" readonly placeholder="Topic JSON will appear here after generation..."></textarea>
           </div>
 
-          <!-- 2 · index output (snippet OR full rewrite) -->
-          <div class="side-card mt-2" style="padding:22px">
-            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;flex-wrap:wrap;gap:8px">
-              <h3 style="margin:0" id="indexOutputTitle">2 · index.json entry</h3>
-              <div style="display:flex;gap:8px">
+          <!-- Index Output -->
+          <div class="side-card mt-2">
+            <div class="card-header">
+              <h3 id="indexOutputTitle">2 · index.json Entry</h3>
+              <div class="output-actions">
                 <button class="btn btn-sm btn-secondary" id="copyIndexBtn" type="button">Copy</button>
                 <button class="btn btn-sm btn-download hidden" id="downloadIndexBtn" type="button">Download index.json</button>
               </div>
             </div>
-            <p class="form-hint mb-1" id="indexOutputHint"></p>
-            <textarea class="output-area" id="indexOutput" readonly style="min-height:180px" placeholder="Index output will appear here…"></textarea>
+            <p class="form-hint mb-1" id="indexOutputHint">Generate a topic first...</p>
+            <textarea class="output-area" id="indexOutput" readonly placeholder="Index output will appear here..."></textarea>
           </div>
 
-          <div class="side-card mt-2" style="padding:22px">
-            <h3 style="margin-bottom:14px">Then finish the loop</h3>
+          <!-- Instructions -->
+          <div class="side-card mt-2">
+            <h3>✅ Final Steps</h3>
             <ol class="step-list">
-              <li>Save your code file under <code>content/&lt;language&gt;/</code>.</li>
-              <li>Save the generated topic JSON under <code>data/topics/&lt;language&gt;/</code>.</li>
-              <li>Replace <code>data/index.json</code> with the rewritten file above (or paste the snippet if you didn't load one).</li>
-              <li><code>git add . && git commit -m "Added: &lt;topic title&gt;" && git push origin main</code></li>
-              <li>GitHub Pages redeploys automatically — live in ~2 minutes. 🚀</li>
+              <li>Save your code file under <code>content/&lt;language&gt;/</code></li>
+              <li>Save the topic JSON under <code>data/topics/&lt;language&gt;/</code></li>
+              <li>Replace <code>data/index.json</code> with the generated file</li>
+              <li>Commit and push: <code>git add . && git commit -m "Added topic" && git push</code></li>
+              <li>GitHub Pages deploys automatically — live in ~2 minutes 🚀</li>
             </ol>
           </div>
+
         </div>
 
       </div>
@@ -249,401 +297,16 @@
 
   </main>
 
+  <!-- ========== FOOTER ========== -->
   <footer class="site-footer">
     <div class="container footer-bottom">
-      <span>Learning Archive · JSON Creator Tool</span>
-      <span><a href="../website/index.html">← Back to the website</a></span>
+      <span>Learning Archive · JSON Creator v2.0</span>
+      <span><a href="../website/index.html">← Back to website</a></span>
     </div>
   </footer>
 
-  <script>
-  (function () {
-    "use strict";
+  <!-- ========== SCRIPTS ========== -->
+  <script src="creator.js"></script>
 
-    const LANG_FOLDER = {
-      "C": "c", "Python": "python", "JavaScript": "javascript",
-      "Java": "java", "SQL": "sql", "HTML/CSS": "html-css", "Other": "other"
-    };
-    const LS_KEY = "arcIndexJson";
-    let savedIndex = null;
-
-    const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
-
-    /* ================= index.json manager ================= */
-
-    function saveIndexToLS(obj) {
-      try { localStorage.setItem(LS_KEY, JSON.stringify(obj)); } catch (e) { /* quota */ }
-    }
-
-    function renderIndexStatus() {
-      const pill = document.getElementById("idxStatusPill");
-      const text = document.getElementById("idxStatusText");
-      const removeBtn = document.getElementById("idxRemoveBtn");
-      if (savedIndex) {
-        const m = savedIndex.metadata || {};
-        const n = (savedIndex.topics || []).length;
-        const files = typeof m.totalFiles === "number" ? m.totalFiles : "?";
-        pill.textContent = "Loaded ✓";
-        pill.classList.add("on");
-        text.innerHTML = `Storing <b>${n}</b> topic${n === 1 ? "" : "s"} · ${files} files · last updated <code>${esc(m.lastUpdated || "—")}</code>. Every generate merges the new entry in, fixes the metadata, and rewrites this stored copy.`;
-        removeBtn.classList.remove("hidden");
-      } else {
-        pill.textContent = "No index loaded";
-        pill.classList.remove("on");
-        text.innerHTML = `Upload your current <code>data/index.json</code> once — it's stored in this browser (localStorage). From then on, generating a topic gives you the <b>full rewritten index.json</b> automatically.`;
-        removeBtn.classList.add("hidden");
-      }
-    }
-
-    function adoptIndex(parsed) {
-      if (!parsed || typeof parsed !== "object" || Array.isArray(parsed) || !Array.isArray(parsed.topics)) {
-        throw new Error('that does not look like index.json (missing the "topics" array)');
-      }
-      if (!parsed.metadata || typeof parsed.metadata !== "object") {
-        parsed.metadata = {};
-      }
-      savedIndex = parsed;
-      saveIndexToLS(parsed);
-      renderIndexStatus();
-    }
-
-    function loadSavedIndex() {
-      try {
-        const raw = localStorage.getItem(LS_KEY);
-        if (raw) adoptIndex(JSON.parse(raw));
-      } catch (e) { savedIndex = null; }
-      renderIndexStatus();
-    }
-
-    document.getElementById("idxFile").addEventListener("change", (e) => {
-      const file = e.target.files[0];
-      if (!file) return;
-      const reader = new FileReader();
-      reader.onload = () => {
-        try {
-          adoptIndex(JSON.parse(reader.result));
-        } catch (err) {
-          alert("Could not load index.json: " + err.message);
-        }
-      };
-      reader.readAsText(file);
-      e.target.value = "";
-    });
-
-    document.getElementById("idxPasteToggle").addEventListener("click", () => {
-      document.getElementById("idxPasteBox").classList.toggle("hidden");
-    });
-
-    document.getElementById("idxPasteLoad").addEventListener("click", () => {
-      const raw = document.getElementById("idxPasteArea").value.trim();
-      if (!raw) { alert("Paste your index.json contents first."); return; }
-      try {
-        adoptIndex(JSON.parse(raw));
-        document.getElementById("idxPasteBox").classList.add("hidden");
-      } catch (err) {
-        alert("Could not parse: " + err.message);
-      }
-    });
-
-    document.getElementById("idxRemoveBtn").addEventListener("click", () => {
-      if (!confirm("Remove the stored index.json from this browser? (Your repo file is not touched.)")) return;
-      savedIndex = null;
-      localStorage.removeItem(LS_KEY);
-      renderIndexStatus();
-    });
-
-    document.getElementById("downloadIndexBtn").addEventListener("click", () => {
-      if (!savedIndex) return;
-      const blob = new Blob([JSON.stringify(savedIndex, null, 2)], { type: "application/json" });
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement("a");
-      a.href = url; a.download = "index.json";
-      document.body.appendChild(a); a.click(); a.remove();
-      setTimeout(() => URL.revokeObjectURL(url), 4000);
-    });
-
-    /* ================= theme toggle ================= */
-
-    const themeBtn = document.getElementById("themeToggle");
-    if (themeBtn) {
-      const sunSVG = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>';
-      const moonSVG = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
-      const sync = () => {
-        /* show what you would switch TO (dark is the default) */
-        themeBtn.innerHTML = document.documentElement.getAttribute("data-theme") === "light" ? moonSVG : sunSVG;
-      };
-      themeBtn.addEventListener("click", () => {
-        const light = document.documentElement.getAttribute("data-theme") === "light";
-        if (light) { document.documentElement.removeAttribute("data-theme"); localStorage.setItem("theme", "dark"); }
-        else { document.documentElement.setAttribute("data-theme", "light"); localStorage.setItem("theme", "light"); }
-        sync();
-      });
-      sync();
-    }
-
-    /* ================= file rows ================= */
-
-    const fileRows = document.getElementById("fileRows");
-
-    function addFileRow(data = {}) {
-      const row = document.createElement("div");
-      row.className = "file-row-builder";
-      row.innerHTML = `
-        <button class="remove-file" title="Remove file" type="button">×</button>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
-          <div class="form-group" style="margin-bottom:10px">
-            <label>File name</label>
-            <input class="form-control f-name" placeholder="pointers-basic.c" value="">
-          </div>
-          <div class="form-group" style="margin-bottom:10px">
-            <label>File path</label>
-            <input class="form-control f-path" placeholder="content/c/pointers-basic.c" value="">
-          </div>
-        </div>
-        <div class="form-group" style="margin-bottom:10px">
-          <label>Description</label>
-          <input class="form-control f-desc" placeholder="What does this file demonstrate?" value="">
-        </div>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
-          <div class="form-group" style="margin-bottom:0">
-            <label>Lines (optional)</label>
-            <input class="form-control f-lines" type="number" min="0" value="">
-          </div>
-          <div class="form-group" style="margin-bottom:0">
-            <label>Size (optional)</label>
-            <input class="form-control f-size" placeholder="1.2KB" value="">
-          </div>
-        </div>`;
-      row.querySelector(".remove-file").addEventListener("click", () => row.remove());
-      if (data.name) row.querySelector(".f-name").value = data.name;
-      if (data.path) row.querySelector(".f-path").value = data.path;
-      if (data.desc) row.querySelector(".f-desc").value = data.desc;
-      if (data.lines) row.querySelector(".f-lines").value = data.lines;
-      if (data.size) row.querySelector(".f-size").value = data.size;
-      fileRows.appendChild(row);
-    }
-
-    document.getElementById("addFileBtn").addEventListener("click", () => {
-      const lang = document.getElementById("t-lang").value;
-      addFileRow({ path: `content/${LANG_FOLDER[lang]}/` });
-    });
-    addFileRow();
-
-    /* ================= helpers ================= */
-
-    function slugify(s) {
-      return String(s).toLowerCase().trim()
-        .replace(/[^a-z0-9]+/g, "-")
-        .replace(/^-+|-+$/g, "");
-    }
-    function nowISO() {
-      return new Date().toISOString().replace(/\.\d{3}Z$/, "Z");
-    }
-    function todayDate() {
-      return nowISO().slice(0, 10);
-    }
-    function parseTags(raw) {
-      return String(raw).split(",").map((t) => slugify(t)).filter(Boolean);
-    }
-
-    /* auto-suggest topic id */
-    const titleInput = document.getElementById("t-title");
-    const langSelect = document.getElementById("t-lang");
-    const idInput = document.getElementById("t-id");
-    let idTouched = false;
-    idInput.addEventListener("input", () => { idTouched = idInput.value.trim() !== ""; });
-    function refreshId() {
-      if (idTouched) return;
-      const langPrefix = { C: "c", Python: "python", JavaScript: "js", Java: "java", SQL: "sql", "HTML/CSS": "web", Other: "misc" }[langSelect.value] || "misc";
-      const slug = slugify(titleInput.value);
-      idInput.value = slug ? `${langPrefix}-${slug}` : "";
-    }
-    titleInput.addEventListener("input", refreshId);
-    langSelect.addEventListener("change", refreshId);
-
-    /* ================= generation ================= */
-
-    function collectFiles() {
-      return [...fileRows.querySelectorAll(".file-row-builder")].map((row, i) => {
-        const name = row.querySelector(".f-name").value.trim();
-        const path = row.querySelector(".f-path").value.trim();
-        if (!name && !path) return null;
-        const entry = {
-          id: "file-" + String(i + 1).padStart(3, "0"),
-          fileName: name || path.split("/").pop(),
-          filePath: path || `content/${LANG_FOLDER[langSelect.value]}/${name}`,
-          description: row.querySelector(".f-desc").value.trim(),
-          dateAdded: nowISO()
-        };
-        const lines = row.querySelector(".f-lines").value;
-        if (lines) entry.lines = parseInt(lines, 10);
-        const size = row.querySelector(".f-size").value.trim();
-        if (size) entry.size = size;
-        return entry;
-      }).filter(Boolean);
-    }
-
-    function generate() {
-      const title = titleInput.value.trim();
-      const language = langSelect.value;
-      const id = idInput.value.trim() || slugify(`${language}-${title}`);
-      if (!title) { alert("Please enter a topic title."); titleInput.focus(); return null; }
-
-      const files = collectFiles();
-      if (!files.length) { alert("Add at least one file (name + path)."); return null; }
-      files.forEach((f) => {
-        if (!/^content\//.test(f.filePath)) {
-          console.warn(`Heads up: "${f.filePath}" does not start with content/ — double-check the path.`);
-        }
-      });
-
-      const tags = parseTags(document.getElementById("t-tags").value);
-      const description = document.getElementById("t-desc").value.trim();
-
-      const topicJSON = {
-        topic: {
-          id,
-          title,
-          language,
-          category: document.getElementById("t-cat").value.trim() || undefined,
-          difficulty: document.getElementById("t-diff").value,
-          dateCreated: nowISO(),
-          lastUpdated: nowISO(),
-          tags,
-          description,
-          learningNotes: {
-            whatILearned: document.getElementById("t-learned").value.trim(),
-            challenges: document.getElementById("t-challenges").value.trim(),
-            nextSteps: document.getElementById("t-next").value.trim()
-          }
-        },
-        files
-      };
-
-      const indexEntry = {
-        id,
-        title,
-        language,
-        dateCreated: todayDate(),
-        lastUpdated: todayDate(),
-        fileCount: files.length,
-        tags,
-        description: description.slice(0, 220),
-        topicFile: `data/topics/${LANG_FOLDER[language]}/${slugify(title.split(" in ")[0]) || slugify(title)}.json`
-      };
-
-      return { topicJSON, indexEntry, id };
-    }
-
-    document.getElementById("generateBtn").addEventListener("click", () => {
-      const out = generate();
-      if (!out) return;
-      document.getElementById("topicOutput").value = JSON.stringify(out.topicJSON, null, 2);
-
-      const titleEl = document.getElementById("indexOutputTitle");
-      const hintEl = document.getElementById("indexOutputHint");
-      const dlBtn = document.getElementById("downloadIndexBtn");
-      const outputEl = document.getElementById("indexOutput");
-
-      if (savedIndex) {
-        /* merge into the stored index, rewriting it completely */
-        const existingIdx = savedIndex.topics.findIndex((t) => t.id === out.id);
-        if (existingIdx !== -1) {
-          const ok = confirm(`Topic id "${out.id}" already exists in your loaded index.json.\n\nOK = replace that entry with this one.\nCancel = abort.`);
-          if (!ok) return;
-          savedIndex.topics.splice(existingIdx, 1);
-        }
-        const updated = JSON.parse(JSON.stringify(savedIndex));
-        updated.topics = [out.indexEntry, ...updated.topics];
-        updated.metadata.totalTopics = updated.topics.length;
-        updated.metadata.totalFiles = updated.topics.reduce((s, t) => s + (t.fileCount || 0), 0);
-        updated.metadata.lastUpdated = nowISO();
-        if (!Array.isArray(updated.metadata.languages)) updated.metadata.languages = [];
-        if (!updated.metadata.languages.includes(out.indexEntry.language)) {
-          updated.metadata.languages.push(out.indexEntry.language);
-        }
-        if (!updated.metadata.firstEntryDate) {
-          updated.metadata.firstEntryDate = out.indexEntry.dateCreated;
-        }
-        savedIndex = updated;
-        saveIndexToLS(updated);           /* rewrite localStorage with the new lines */
-        renderIndexStatus();
-
-        outputEl.value = JSON.stringify(updated, null, 2);
-        titleEl.textContent = "2 · Updated index.json (full file)";
-        hintEl.innerHTML = `Your <b>complete rewritten index.json</b> — the new entry is merged in, counts and dates are fixed, and the stored copy was updated. Download it and replace <code>data/index.json</code>.`;
-        dlBtn.classList.remove("hidden");
-      } else {
-        outputEl.value = JSON.stringify(out.indexEntry, null, 2);
-        titleEl.textContent = "2 · index.json entry";
-        hintEl.innerHTML = `Paste inside the <code>"topics": [ … ]</code> array of <code>data/index.json</code>, then update <code>totalTopics</code>, <code>totalFiles</code>, <code>languages</code> and <code>lastUpdated</code>. <b>Tip:</b> upload your index.json above to get full automatic rewrites instead.`;
-        dlBtn.classList.add("hidden");
-      }
-    });
-
-    /* ================= copy / download (topic) ================= */
-
-    async function copyFrom(id, btn) {
-      const text = document.getElementById(id).value;
-      if (!text) { alert("Generate the JSON first."); return; }
-      try {
-        await navigator.clipboard.writeText(text);
-        const old = btn.textContent;
-        btn.textContent = "Copied!";
-        setTimeout(() => { btn.textContent = old; }, 1500);
-      } catch (e) {
-        document.getElementById(id).select();
-        document.execCommand("copy");
-      }
-    }
-    document.getElementById("copyTopicBtn").addEventListener("click", (e) => copyFrom("topicOutput", e.target));
-    document.getElementById("copyIndexBtn").addEventListener("click", (e) => copyFrom("indexOutput", e.target));
-
-    document.getElementById("downloadTopicBtn").addEventListener("click", () => {
-      const text = document.getElementById("topicOutput").value;
-      if (!text) { alert("Generate the JSON first."); return; }
-      const id = (idInput.value.trim() || "topic").replace(/[^a-z0-9-]/gi, "-").toLowerCase();
-      const blob = new Blob([text], { type: "application/json" });
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement("a");
-      a.href = url; a.download = `${id}.json`;
-      document.body.appendChild(a); a.click(); a.remove();
-      setTimeout(() => URL.revokeObjectURL(url), 4000);
-    });
-
-    /* ================= sample / clear ================= */
-
-    document.getElementById("loadSampleBtn").addEventListener("click", () => {
-      titleInput.value = "Pointers in C";
-      langSelect.value = "C";
-      document.getElementById("t-cat").value = "Memory Management";
-      document.getElementById("t-diff").value = "intermediate";
-      document.getElementById("t-tags").value = "pointers, memory, advanced";
-      document.getElementById("t-desc").value = "Complete exploration of pointers in C. Covers basics, pointer arithmetic, pointers to pointers, and common pitfalls.";
-      document.getElementById("t-learned").value = "Pointers store memory addresses. Pointer arithmetic was tricky but is clicking now.";
-      document.getElementById("t-challenges").value = "Segmentation faults when dereferencing null pointers. Learned to always initialise.";
-      document.getElementById("t-next").value = "Study function pointers and dynamic memory allocation.";
-      idTouched = false;
-      refreshId();
-      fileRows.innerHTML = "";
-      addFileRow({ name: "pointers-basic.c", path: "content/c/pointers-basic.c", desc: "Introduction to pointers, declaration and basic usage", lines: 67, size: "2.2KB" });
-      addFileRow({ name: "pointers-advanced.c", path: "content/c/pointers-advanced.c", desc: "Pointer arithmetic and complex pointer operations", lines: 79, size: "2.5KB" });
-    });
-
-    document.getElementById("clearFormBtn").addEventListener("click", () => {
-      document.querySelectorAll("#t-title,#t-cat,#t-id,#t-tags,#t-desc,#t-learned,#t-challenges,#t-next").forEach((el) => { el.value = ""; });
-      idTouched = false;
-      fileRows.innerHTML = "";
-      addFileRow();
-      document.getElementById("topicOutput").value = "";
-      document.getElementById("indexOutput").value = "";
-      /* the stored index.json is intentionally kept */
-      renderIndexStatus();
-    });
-
-    /* ================= boot ================= */
-    loadSavedIndex();
-  })();
-  </script>
 </body>
 </html>

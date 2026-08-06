@@ -1,0 +1,31 @@
+{
+  "topic": {
+    "id": "c-grade-calculator",
+    "title": "grade-calculator",
+    "language": "C",
+    "category": "If-else statement",
+    "difficulty": "beginner",
+    "dateCreated": "2026-08-06T14:38:24Z",
+    "lastUpdated": "2026-08-06T14:38:24Z",
+    "tags": [
+      "if",
+      "else",
+      "else-if"
+    ],
+    "description": "To understand how if else work.",
+    "learningNotes": {
+      "whatILearned": "Adding a error cheker is good.",
+      "challenges": "I first write the wrong logic for marks with grade.",
+      "nextSteps": "I will practice more on this topic."
+    }
+  },
+  "files": [
+    {
+      "id": "file-001",
+      "fileName": "grade-calculator.c",
+      "filePath": "content/c/grade-calculator.c",
+      "description": "If else statement.",
+      "dateAdded": "2026-08-06T14:38:24Z"
+    }
+  ]
+}
