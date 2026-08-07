@@ -1,5 +1,6 @@
 /* ============================================
    JSON Creator v2.0 - Main Logic
+   Complete file with fixed topicFile naming
    ============================================ */
 
 (function () {
@@ -51,7 +52,7 @@
           name: "Variables & Data Types",
           category: "Basics",
           difficulty: "beginner",
-          tags: ["variables", "data-types", "int", "float", "char"],
+          tags: ["variables", "data-types", "operators"],
           descStarter: "Understanding variables, data types (int, float, char, double), and variable declarations in C."
         },
         {
@@ -445,7 +446,7 @@
           category: "Modules & Packages",
           difficulty: "beginner",
           tags: ["modules", "import"],
-          descStarter: "Importing and using modules. Creating custom modules and understanding Python's module system."
+          descStarter: "Importing and using modules. Creating custom modules and understanding Python module system."
         }
       ],
       defaultDifficulty: "beginner"
@@ -475,7 +476,7 @@
         "objects", "map", "filter", "reduce", "forEach", "destructuring",
         "spread", "rest", "dom", "querySelector", "getElementById",
         "createElement", "appendChild", "innerHTML", "events", "addEventListener",
-        "click", "submit", "event-bubbling", "event-delegation", "callbacks",
+        "click", "submit", "event-bubbling", "event-delegation",
         "promises", "async-await", "fetch", "then", "catch", "es6",
         "template-literals", "classes", "modules", "import", "export",
         "rest-api", "json", "http", "ajax"
@@ -499,7 +500,7 @@
           name: "Data Types",
           category: "Basics",
           difficulty: "beginner",
-          tags: ["data-types", "primitives"],
+          tags: ["data-types", "variables"],
           descStarter: "Understanding JavaScript data types: string, number, boolean, null, undefined, object, symbol."
         },
         {
@@ -611,14 +612,14 @@
           name: "Event Delegation",
           category: "Events",
           difficulty: "intermediate",
-          tags: ["event-delegation", "bubbling"],
+          tags: ["event-delegation", "event-bubbling"],
           descStarter: "Efficient event handling using event delegation. Understanding event bubbling and capturing."
         },
         {
           name: "Form Handling",
           category: "Events",
           difficulty: "intermediate",
-          tags: ["forms", "submit", "validation"],
+          tags: ["forms", "submit"],
           descStarter: "Processing form submissions with JavaScript. Form validation and preventing default behavior."
         },
         {
@@ -681,7 +682,8 @@
         "polymorphism", "encapsulation", "abstraction", "interfaces",
         "arraylist", "hashmap", "hashset", "collections", "try-catch",
         "exceptions", "throws", "file-io", "streams", "serialization",
-        "threads", "runnable", "synchronized", "generics", "lambda", "stream-api"
+        "threads", "runnable", "synchronized", "generics", "lambda",
+        "stream-api"
       ],
       topicTemplates: [
         {
@@ -837,10 +839,11 @@
       ],
       tags: [
         "select", "where", "order-by", "group-by", "having", "inner-join",
-        "left-join", "right-join", "full-join", "count", "sum", "avg", "min",
-        "max", "subquery", "nested-query", "create", "insert", "update",
-        "delete", "primary-key", "foreign-key", "normalization", "index",
-        "performance", "optimization", "views", "triggers", "stored-procedures"
+        "left-join", "right-join", "full-join", "count", "sum", "avg",
+        "min", "max", "subquery", "nested-query", "create", "insert",
+        "update", "delete", "primary-key", "foreign-key", "normalization",
+        "index", "performance", "optimization", "views", "triggers",
+        "stored-procedures"
       ],
       topicTemplates: [
         {
@@ -911,14 +914,14 @@
           category: "Subqueries",
           difficulty: "intermediate",
           tags: ["subquery", "nested-query"],
-          descStarter: "Queries within queries (subqueries). Using SELECT statements inside WHERE clause."
+          descStarter: "Queries within queries. Using SELECT statements inside WHERE clause."
         },
         {
           name: "CREATE TABLE",
           category: "Database Design",
           difficulty: "beginner",
           tags: ["create", "table", "schema"],
-          descStarter: "Creating database tables with CREATE TABLE statement. Defining columns and data types."
+          descStarter: "Creating database tables with CREATE TABLE. Defining columns and data types."
         },
         {
           name: "INSERT INTO",
@@ -932,14 +935,14 @@
           category: "Basics",
           difficulty: "beginner",
           tags: ["update", "modify"],
-          descStarter: "Modifying existing data with UPDATE statement. Using WHERE to target specific rows."
+          descStarter: "Modifying existing data with UPDATE. Using WHERE to target specific rows."
         },
         {
           name: "DELETE Statement",
           category: "Basics",
           difficulty: "beginner",
           tags: ["delete", "remove"],
-          descStarter: "Removing data from tables using DELETE statement. Careful with WHERE clause."
+          descStarter: "Removing data from tables using DELETE statement."
         },
         {
           name: "Primary & Foreign Keys",
@@ -960,7 +963,7 @@
           category: "Views & Triggers",
           difficulty: "intermediate",
           tags: ["views", "virtual-table"],
-          descStarter: "Creating virtual tables with views. Simplifying complex queries and providing abstraction."
+          descStarter: "Creating virtual tables with views. Simplifying complex queries."
         }
       ],
       defaultDifficulty: "beginner"
@@ -1004,21 +1007,21 @@
           category: "HTML Basics",
           difficulty: "beginner",
           tags: ["headings", "paragraphs"],
-          descStarter: "Text formatting with h1-h6 headings and paragraph tags. Text hierarchy."
+          descStarter: "Text formatting with h1-h6 headings and paragraph tags."
         },
         {
           name: "Links & Images",
           category: "HTML Basics",
           difficulty: "beginner",
           tags: ["links", "images"],
-          descStarter: "Adding hyperlinks with anchor tags and embedding images. Href and src attributes."
+          descStarter: "Adding hyperlinks with anchor tags and embedding images."
         },
         {
           name: "Lists (Ordered & Unordered)",
           category: "HTML Basics",
           difficulty: "beginner",
           tags: ["lists", "ul", "ol"],
-          descStarter: "Creating bullet lists (ul) and numbered lists (ol). List items and nesting."
+          descStarter: "Creating bullet lists (ul) and numbered lists (ol). Nesting list items."
         },
         {
           name: "HTML Forms",
@@ -1031,7 +1034,7 @@
           name: "Form Input Types",
           category: "Forms",
           difficulty: "beginner",
-          tags: ["input", "text", "email", "password"],
+          tags: ["input", "text", "email"],
           descStarter: "Different input types: text, email, password, number, checkbox, radio, etc."
         },
         {
@@ -1039,7 +1042,7 @@
           category: "Semantic HTML",
           difficulty: "intermediate",
           tags: ["semantic", "header", "footer", "nav"],
-          descStarter: "Using semantic elements for better structure: header, nav, main, section, article, footer."
+          descStarter: "Using semantic elements: header, nav, main, section, article, footer."
         },
         {
           name: "Tables",
@@ -1053,7 +1056,7 @@
           category: "CSS Basics",
           difficulty: "beginner",
           tags: ["css", "selectors"],
-          descStarter: "Targeting HTML elements with CSS selectors: element, class, id, and attribute selectors."
+          descStarter: "Targeting HTML elements with CSS selectors: element, class, id, attribute."
         },
         {
           name: "Colors & Backgrounds",
@@ -1074,56 +1077,56 @@
           category: "CSS Basics",
           difficulty: "beginner",
           tags: ["typography", "font"],
-          descStarter: "Styling text with font-family, font-size, font-weight, line-height, and text properties."
+          descStarter: "Styling text with font-family, font-size, font-weight, line-height."
         },
         {
           name: "Flexbox Layout",
           category: "Flexbox",
           difficulty: "intermediate",
           tags: ["flexbox", "layout"],
-          descStarter: "Creating flexible layouts with Flexbox. Flex container and flex items properties."
+          descStarter: "Creating flexible layouts with Flexbox. Flex container and flex item properties."
         },
         {
           name: "Flexbox Alignment",
           category: "Flexbox",
           difficulty: "intermediate",
           tags: ["flexbox", "align", "justify"],
-          descStarter: "Aligning and justifying content with Flexbox. justify-content, align-items, align-self."
+          descStarter: "Aligning content with justify-content, align-items, align-self."
         },
         {
           name: "CSS Grid",
           category: "Grid",
           difficulty: "intermediate",
           tags: ["grid", "layout"],
-          descStarter: "Two-dimensional layouts with CSS Grid. Grid container, rows, columns, and areas."
+          descStarter: "Two-dimensional layouts with CSS Grid. Grid container, rows, columns."
         },
         {
           name: "Grid Template Areas",
           category: "Grid",
           difficulty: "intermediate",
           tags: ["grid", "template-areas"],
-          descStarter: "Named grid areas for intuitive layout design. Creating complex grid structures."
+          descStarter: "Named grid areas for intuitive layout design."
         },
         {
           name: "Media Queries",
           category: "Responsive Design",
           difficulty: "intermediate",
           tags: ["media-queries", "responsive"],
-          descStarter: "Responsive design with media queries. Adapting layouts for different screen sizes."
+          descStarter: "Responsive design with media queries for different screen sizes."
         },
         {
           name: "Mobile-First Design",
           category: "Responsive Design",
           difficulty: "intermediate",
           tags: ["mobile-first", "responsive"],
-          descStarter: "Building mobile-first responsive websites. Progressive enhancement approach."
+          descStarter: "Building mobile-first responsive websites. Progressive enhancement."
         },
         {
           name: "CSS Transitions",
           category: "Animations",
           difficulty: "intermediate",
           tags: ["transitions", "animations"],
-          descStarter: "Smooth property changes with CSS transitions. Transition duration, timing, and delay."
+          descStarter: "Smooth property changes with CSS transitions. Duration, timing, and delay."
         },
         {
           name: "CSS Animations",
@@ -1137,14 +1140,14 @@
           category: "Layout",
           difficulty: "intermediate",
           tags: ["positioning", "absolute", "relative"],
-          descStarter: "CSS positioning: static, relative, absolute, fixed, and sticky. Understanding context."
+          descStarter: "CSS positioning: static, relative, absolute, fixed, and sticky."
         },
         {
           name: "Pseudo-classes & Pseudo-elements",
           category: "CSS Basics",
           difficulty: "intermediate",
           tags: ["pseudo-classes", "pseudo-elements"],
-          descStarter: "Styling with :hover, :focus, :nth-child, ::before, ::after, and other pseudo-selectors."
+          descStarter: "Styling with :hover, :focus, :nth-child, ::before, ::after."
         }
       ],
       defaultDifficulty: "beginner"
@@ -1172,8 +1175,6 @@
 
   const LS_KEYS = {
     INDEX: "arcIndexJson",
-    DRAFT: "arcFormDraft",
-    CUSTOM_TAGS: "arcCustomTags",
     THEME: "theme"
   };
 
@@ -1222,6 +1223,11 @@
       return extMap[ext] || null;
     },
 
+    /* Strip extension from filename */
+    stripExtension(filename) {
+      return filename.replace(/\.[^/.]+$/, "");
+    },
+
     saveToLS(key, data) {
       try {
         localStorage.setItem(key, JSON.stringify(data));
@@ -1254,74 +1260,74 @@
      ============================================ */
 
   const $ = (id) => document.getElementById(id);
-  const $$ = (selector) => document.querySelectorAll(selector);
+  const $$ = (sel) => document.querySelectorAll(sel);
 
   const DOM = {
-    // File Detection
-    dropZone: $("dropZone"),
-    fileInput: $("fileInput"),
-    detectedInfo: $("detectedInfo"),
-    detectedLang: $("detectedLang"),
-    detectedFile: $("detectedFile"),
-    clearDetection: $("clearDetection"),
+    /* File Detection */
+    dropZone:        $("dropZone"),
+    fileInput:       $("fileInput"),
+    detectedInfo:    $("detectedInfo"),
+    detectedLang:    $("detectedLang"),
+    detectedFile:    $("detectedFile"),
+    clearDetection:  $("clearDetection"),
 
-    // Form Fields
-    langSelect: $("langSelect"),
-    topicTemplates: $("topicTemplates"),
-    topicTitle: $("topicTitle"),
-    topicCategory: $("topicCategory"),
-    topicDifficulty: $("topicDifficulty"),
-    topicId: $("topicId"),
-    topicDesc: $("topicDesc"),
-    whatLearned: $("whatLearned"),
-    challenges: $("challenges"),
-    nextSteps: $("nextSteps"),
+    /* Form Fields */
+    langSelect:       $("langSelect"),
+    topicTemplates:   $("topicTemplates"),
+    topicTitle:       $("topicTitle"),
+    topicCategory:    $("topicCategory"),
+    topicDifficulty:  $("topicDifficulty"),
+    topicId:          $("topicId"),
+    topicDesc:        $("topicDesc"),
+    whatLearned:      $("whatLearned"),
+    challenges:       $("challenges"),
+    nextSteps:        $("nextSteps"),
 
-    // Tags
+    /* Tags */
     tagSuggestions: $("tagSuggestions"),
-    selectedTags: $("selectedTags"),
-    customTags: $("customTags"),
+    selectedTags:   $("selectedTags"),
+    customTags:     $("customTags"),
 
-    // Description
-    descActions: $("descActions"),
+    /* Description starter */
+    descActions:    $("descActions"),
     useDescStarter: $("useDescStarter"),
 
-    // Files
-    fileRows: $("fileRows"),
+    /* Files */
+    fileRows:   $("fileRows"),
     addFileBtn: $("addFileBtn"),
 
-    // Errors
+    /* Inline errors */
     titleError: $("titleError"),
-    descError: $("descError"),
+    descError:  $("descError"),
 
-    // Actions
-    generateBtn: $("generateBtn"),
+    /* Action buttons */
+    generateBtn:  $("generateBtn"),
     loadSampleBtn: $("loadSampleBtn"),
-    clearFormBtn: $("clearFormBtn"),
+    clearFormBtn:  $("clearFormBtn"),
 
-    // Index Manager
-    indexFile: $("indexFile"),
-    indexStatusPill: $("indexStatusPill"),
-    indexStatusText: $("indexStatusText"),
-    indexPasteToggle: $("indexPasteToggle"),
-    indexPasteBox: $("indexPasteBox"),
-    indexPasteArea: $("indexPasteArea"),
-    indexPasteLoad: $("indexPasteLoad"),
-    indexRemoveBtn: $("indexRemoveBtn"),
+    /* Index Manager */
+    indexFile:         $("indexFile"),
+    indexStatusPill:   $("indexStatusPill"),
+    indexStatusText:   $("indexStatusText"),
+    indexPasteToggle:  $("indexPasteToggle"),
+    indexPasteBox:     $("indexPasteBox"),
+    indexPasteArea:    $("indexPasteArea"),
+    indexPasteLoad:    $("indexPasteLoad"),
+    indexRemoveBtn:    $("indexRemoveBtn"),
 
-    // Outputs
-    topicOutput: $("topicOutput"),
-    indexOutput: $("indexOutput"),
+    /* Outputs */
+    topicOutput:      $("topicOutput"),
+    indexOutput:      $("indexOutput"),
     indexOutputTitle: $("indexOutputTitle"),
-    indexOutputHint: $("indexOutputHint"),
+    indexOutputHint:  $("indexOutputHint"),
     downloadIndexBtn: $("downloadIndexBtn"),
 
-    // Copy/Download
-    copyTopicBtn: $("copyTopicBtn"),
+    /* Copy / Download */
+    copyTopicBtn:    $("copyTopicBtn"),
     downloadTopicBtn: $("downloadTopicBtn"),
-    copyIndexBtn: $("copyIndexBtn"),
+    copyIndexBtn:    $("copyIndexBtn"),
 
-    // Theme
+    /* Theme */
     themeToggle: $("themeToggle")
   };
 
@@ -1331,46 +1337,42 @@
 
   function handleFileDetection(file) {
     const lang = utils.detectLanguageFromExtension(file.name);
-    
+
     if (!lang) {
-      alert("Could not detect language from file extension. Supported: .c, .py, .js, .java, .sql, .html, .css");
+      alert("Could not detect language. Supported: .c .h .py .js .java .sql .html .css");
       return;
     }
 
     state.detectedFile = file;
-    state.selectedLang = lang;
+    state.selectedLang  = lang;
 
-    // Update UI
-    DOM.langSelect.value = lang;
+    /* Update UI badges */
+    DOM.langSelect.value       = lang;
     DOM.detectedLang.textContent = lang;
     DOM.detectedFile.textContent = file.name;
     DOM.detectedInfo.classList.remove("hidden");
 
-    // Trigger language change
+    /* Trigger language change so templates/tags update */
     handleLanguageChange();
 
-    // Auto-fill first file row
-    const firstFileRow = DOM.fileRows.querySelector(".file-row-builder");
-    if (firstFileRow) {
+    /* Auto-fill the first file row */
+    const firstRow = DOM.fileRows.querySelector(".file-row-builder");
+    if (firstRow) {
       const config = LANG_CONFIG[lang];
-      const nameInput = firstFileRow.querySelector(".f-name");
-      const pathInput = firstFileRow.querySelector(".f-path");
-      
-      nameInput.value = file.name;
-      pathInput.value = `content/${config.folder}/${file.name}`;
+      firstRow.querySelector(".f-name").value = file.name;
+      firstRow.querySelector(".f-path").value =
+        `content/${config.folder}/${file.name}`;
     }
   }
 
-  // Drag & Drop
+  /* Drag-and-drop */
   DOM.dropZone.addEventListener("dragover", (e) => {
     e.preventDefault();
     DOM.dropZone.classList.add("dragover");
   });
-
   DOM.dropZone.addEventListener("dragleave", () => {
     DOM.dropZone.classList.remove("dragover");
   });
-
   DOM.dropZone.addEventListener("drop", (e) => {
     e.preventDefault();
     DOM.dropZone.classList.remove("dragover");
@@ -1378,14 +1380,14 @@
     if (file) handleFileDetection(file);
   });
 
-  // File Input
+  /* Browse button */
   DOM.fileInput.addEventListener("change", (e) => {
     const file = e.target.files[0];
     if (file) handleFileDetection(file);
     e.target.value = "";
   });
 
-  // Clear Detection
+  /* Clear detection */
   DOM.clearDetection.addEventListener("click", () => {
     state.detectedFile = null;
     DOM.detectedInfo.classList.add("hidden");
@@ -1396,25 +1398,21 @@
      ============================================ */
 
   function handleLanguageChange() {
-    const lang = DOM.langSelect.value;
+    const lang   = DOM.langSelect.value;
     state.selectedLang = lang;
     const config = LANG_CONFIG[lang];
 
-    // Update categories
+    /* Rebuild category dropdown */
     DOM.topicCategory.innerHTML = config.categories
       .map((cat) => `<option value="${cat}">${cat}</option>`)
       .join("");
 
-    // Update difficulty default
+    /* Reset difficulty to language default */
     DOM.topicDifficulty.value = config.defaultDifficulty;
 
-    // Render topic templates
+    /* Rebuild templates & tags */
     renderTopicTemplates();
-
-    // Render tag suggestions
     renderTagSuggestions();
-
-    // Update topic ID if not manually touched
     updateTopicId();
   }
 
@@ -1425,54 +1423,49 @@
      ============================================ */
 
   function renderTopicTemplates() {
-    const config = LANG_CONFIG[state.selectedLang];
-    const html = config.topicTemplates
+    const templates = LANG_CONFIG[state.selectedLang].topicTemplates;
+
+    DOM.topicTemplates.innerHTML = templates
       .map((tpl, idx) => `
         <div class="topic-chip" data-index="${idx}">
           <span class="topic-chip-icon">📄</span>
           ${utils.escapeHTML(tpl.name)}
-        </div>
-      `)
+        </div>`)
       .join("");
 
-    DOM.topicTemplates.innerHTML = html;
-
-    // Add click handlers
-    $$(".topic-chip").forEach((chip) => {
-      chip.addEventListener("click", () => {
-        const idx = parseInt(chip.dataset.index);
-        selectTopicTemplate(idx);
-      });
+    DOM.topicTemplates.querySelectorAll(".topic-chip").forEach((chip) => {
+      chip.addEventListener("click", () =>
+        selectTopicTemplate(parseInt(chip.dataset.index))
+      );
     });
   }
 
   function selectTopicTemplate(index) {
-    const config = LANG_CONFIG[state.selectedLang];
-    const tpl = config.topicTemplates[index];
+    const tpl = LANG_CONFIG[state.selectedLang].topicTemplates[index];
 
-    // Update active state
-    $$(".topic-chip").forEach((chip, i) => {
-      chip.classList.toggle("active", i === index);
-    });
+    /* Highlight active chip */
+    DOM.topicTemplates.querySelectorAll(".topic-chip").forEach((c, i) =>
+      c.classList.toggle("active", i === index)
+    );
 
     state.selectedTemplate = tpl;
 
-    // Auto-fill form (but allow editing)
-    DOM.topicTitle.value = `${tpl.name} in ${state.selectedLang}`;
-    DOM.topicCategory.value = tpl.category;
+    /* Fill form */
+    DOM.topicTitle.value      = `${tpl.name} in ${state.selectedLang}`;
+    DOM.topicCategory.value   = tpl.category;
     DOM.topicDifficulty.value = tpl.difficulty;
 
-    // Pre-select tags
+    /* Pre-select tags */
     state.selectedTags.clear();
-    tpl.tags.forEach((tag) => state.selectedTags.add(tag));
+    tpl.tags.forEach((t) => state.selectedTags.add(t));
     renderSelectedTags();
     updateTagPillsState();
 
-    // Show description starter
+    /* Offer description starter */
     state.currentDescStarter = tpl.descStarter;
     DOM.useDescStarter.classList.remove("hidden");
 
-    // Update ID
+    /* Refresh topic ID */
     state.idTouched = false;
     updateTopicId();
   }
@@ -1487,23 +1480,17 @@
      ============================================ */
 
   function renderTagSuggestions() {
-    const config = LANG_CONFIG[state.selectedLang];
-    const html = config.tags
+    const tags = LANG_CONFIG[state.selectedLang].tags;
+
+    DOM.tagSuggestions.innerHTML = tags
       .map((tag) => `
         <div class="tag-pill" data-tag="${tag}">
           ${utils.escapeHTML(tag)}
-        </div>
-      `)
+        </div>`)
       .join("");
 
-    DOM.tagSuggestions.innerHTML = html;
-
-    // Add click handlers
-    $$(".tag-pill").forEach((pill) => {
-      pill.addEventListener("click", () => {
-        const tag = pill.dataset.tag;
-        toggleTag(tag);
-      });
+    DOM.tagSuggestions.querySelectorAll(".tag-pill").forEach((pill) => {
+      pill.addEventListener("click", () => toggleTag(pill.dataset.tag));
     });
 
     updateTagPillsState();
@@ -1520,9 +1507,8 @@
   }
 
   function updateTagPillsState() {
-    $$(".tag-pill").forEach((pill) => {
-      const tag = pill.dataset.tag;
-      pill.classList.toggle("selected", state.selectedTags.has(tag));
+    DOM.tagSuggestions.querySelectorAll(".tag-pill").forEach((pill) => {
+      pill.classList.toggle("selected", state.selectedTags.has(pill.dataset.tag));
     });
   }
 
@@ -1533,28 +1519,24 @@
     ];
 
     if (allTags.length === 0) {
-      DOM.selectedTags.innerHTML = '<span class="no-tags-msg">No tags selected</span>';
+      DOM.selectedTags.innerHTML =
+        '<span class="no-tags-msg">No tags selected</span>';
       return;
     }
 
-    const html = allTags.map((tag, idx) => {
-      const isCustom = state.customTags.includes(tag);
-      return `
-        <div class="selected-tag-item ${isCustom ? 'custom' : ''}" data-tag="${tag}">
-          ${utils.escapeHTML(tag)}
-          <button class="selected-tag-remove" data-tag="${tag}" type="button">×</button>
-        </div>
-      `;
-    }).join("");
+    DOM.selectedTags.innerHTML = allTags
+      .map((tag) => {
+        const isCustom = state.customTags.includes(tag);
+        return `
+          <div class="selected-tag-item ${isCustom ? "custom" : ""}">
+            ${utils.escapeHTML(tag)}
+            <button class="selected-tag-remove" data-tag="${tag}" type="button">×</button>
+          </div>`;
+      })
+      .join("");
 
-    DOM.selectedTags.innerHTML = html;
-
-    // Add remove handlers
-    $$(".selected-tag-remove").forEach((btn) => {
-      btn.addEventListener("click", () => {
-        const tag = btn.dataset.tag;
-        removeTag(tag);
-      });
+    DOM.selectedTags.querySelectorAll(".selected-tag-remove").forEach((btn) => {
+      btn.addEventListener("click", () => removeTag(btn.dataset.tag));
     });
   }
 
@@ -1565,24 +1547,25 @@
     updateTagPillsState();
   }
 
-  // Custom tags input
-  DOM.customTags.addEventListener("change", () => {
-    const input = DOM.customTags.value.trim();
-    if (!input) return;
-
-    const tags = input
-      .split(",")
+  /* Custom tags input — commit on Enter or blur */
+  function commitCustomTags() {
+    const raw = DOM.customTags.value.trim();
+    if (!raw) return;
+    raw.split(",")
       .map((t) => utils.slugify(t))
-      .filter(Boolean);
-
-    tags.forEach((tag) => {
-      if (!state.selectedTags.has(tag) && !state.customTags.includes(tag)) {
-        state.customTags.push(tag);
-      }
-    });
-
+      .filter(Boolean)
+      .forEach((tag) => {
+        if (!state.selectedTags.has(tag) && !state.customTags.includes(tag)) {
+          state.customTags.push(tag);
+        }
+      });
     DOM.customTags.value = "";
     renderSelectedTags();
+  }
+
+  DOM.customTags.addEventListener("change", commitCustomTags);
+  DOM.customTags.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") { e.preventDefault(); commitCustomTags(); }
   });
 
   /* ============================================
@@ -1591,24 +1574,16 @@
 
   function updateTopicId() {
     if (state.idTouched) return;
-
     const title = DOM.topicTitle.value.trim();
-    if (!title) {
-      DOM.topicId.value = "";
-      return;
-    }
+    if (!title) { DOM.topicId.value = ""; return; }
 
-    const langPrefix = {
-      C: "c",
-      Python: "python",
-      JavaScript: "js",
-      Java: "java",
-      SQL: "sql",
-      "HTML/CSS": "web"
+    const prefix = {
+      C: "c", Python: "python", JavaScript: "js",
+      Java: "java", SQL: "sql", "HTML/CSS": "web"
     }[state.selectedLang] || "misc";
 
     const slug = utils.slugify(title);
-    DOM.topicId.value = slug ? `${langPrefix}-${slug}` : "";
+    DOM.topicId.value = slug ? `${prefix}-${slug}` : "";
   }
 
   DOM.topicTitle.addEventListener("input", updateTopicId);
@@ -1621,44 +1596,50 @@
      ============================================ */
 
   function addFileRow(data = {}) {
-    const row = document.createElement("div");
-    row.className = "file-row-builder";
-    
-    const config = LANG_CONFIG[state.selectedLang];
+    const config      = LANG_CONFIG[state.selectedLang];
     const defaultPath = `content/${config.folder}/`;
 
+    const row = document.createElement("div");
+    row.className = "file-row-builder";
     row.innerHTML = `
-      <button class="remove-file" title="Remove file" type="button">×</button>
+      <button class="remove-file" title="Remove" type="button">×</button>
       <div class="file-row-grid">
         <div class="form-group" style="margin-bottom:10px">
           <label>File Name</label>
-          <input class="form-control f-name" placeholder="example${config.extension}" value="${data.name || ''}">
+          <input class="form-control f-name"
+                 placeholder="example${config.extension}"
+                 value="${utils.escapeHTML(data.name || "")}">
         </div>
         <div class="form-group" style="margin-bottom:10px">
           <label>File Path</label>
-          <input class="form-control f-path" placeholder="${defaultPath}example${config.extension}" value="${data.path || ''}">
+          <input class="form-control f-path"
+                 placeholder="${defaultPath}example${config.extension}"
+                 value="${utils.escapeHTML(data.path || "")}">
         </div>
       </div>
       <div class="form-group" style="margin-bottom:10px">
         <label>Description</label>
-        <input class="form-control f-desc" placeholder="What does this file demonstrate?" value="${data.desc || ''}">
+        <input class="form-control f-desc"
+               placeholder="What does this file demonstrate?"
+               value="${utils.escapeHTML(data.desc || "")}">
       </div>
       <div class="file-row-grid">
         <div class="form-group" style="margin-bottom:0">
           <label>Lines (optional)</label>
-          <input class="form-control f-lines" type="number" min="0" value="${data.lines || ''}">
+          <input class="form-control f-lines" type="number" min="0"
+                 value="${data.lines || ""}">
         </div>
         <div class="form-group" style="margin-bottom:0">
           <label>Size (optional)</label>
-          <input class="form-control f-size" placeholder="1.2KB" value="${data.size || ''}">
+          <input class="form-control f-size" placeholder="1.2KB"
+                 value="${utils.escapeHTML(data.size || "")}">
         </div>
-      </div>
-    `;
+      </div>`;
 
-    // Remove button
+    /* Remove row */
     row.querySelector(".remove-file").addEventListener("click", () => row.remove());
 
-    // Auto-fill path when name changes
+    /* Auto-fill path when name is typed */
     const nameInput = row.querySelector(".f-name");
     const pathInput = row.querySelector(".f-path");
     let pathTouched = !!data.path;
@@ -1666,11 +1647,11 @@
     nameInput.addEventListener("input", () => {
       if (pathTouched) return;
       const name = nameInput.value.trim();
-      if (name) {
-        const ext = config.extension;
-        const fileName = name.endsWith(ext) ? name : name + ext;
-        pathInput.value = `${defaultPath}${fileName}`;
-      }
+      if (!name) { pathInput.value = ""; return; }
+      /* Add extension only if missing */
+      const hasExt = name.includes(".");
+      const fileName = hasExt ? name : name + config.extension;
+      pathInput.value = `${defaultPath}${fileName}`;
     });
 
     pathInput.addEventListener("input", () => {
@@ -1690,12 +1671,12 @@
         if (!name && !path) return null;
 
         const config = LANG_CONFIG[state.selectedLang];
-        const entry = {
-          id: "file-" + String(i + 1).padStart(3, "0"),
-          fileName: name || path.split("/").pop(),
-          filePath: path || `content/${config.folder}/${name}`,
+        const entry  = {
+          id:          "file-" + String(i + 1).padStart(3, "0"),
+          fileName:    name || path.split("/").pop(),
+          filePath:    path || `content/${config.folder}/${name}`,
           description: row.querySelector(".f-desc").value.trim(),
-          dateAdded: utils.nowISO()
+          dateAdded:   utils.nowISO()
         };
 
         const lines = row.querySelector(".f-lines").value;
@@ -1710,141 +1691,170 @@
   }
 
   /* ============================================
-     FORM VALIDATION
+     FORM VALIDATION (inline — no alerts)
      ============================================ */
 
   function validateForm() {
-    let isValid = true;
+    let valid = true;
 
-    // Title
+    /* Title */
     if (!DOM.topicTitle.value.trim()) {
-      DOM.titleError.textContent = "Topic title is required";
+      DOM.titleError.textContent = "Topic title is required.";
       DOM.titleError.classList.remove("hidden");
       DOM.topicTitle.classList.add("error");
-      isValid = false;
+      valid = false;
     } else {
       DOM.titleError.classList.add("hidden");
       DOM.topicTitle.classList.remove("error");
     }
 
-    // Description
+    /* Description */
     if (!DOM.topicDesc.value.trim()) {
-      DOM.descError.textContent = "Description is required";
+      DOM.descError.textContent = "Description is required.";
       DOM.descError.classList.remove("hidden");
       DOM.topicDesc.classList.add("error");
-      isValid = false;
+      valid = false;
     } else {
       DOM.descError.classList.add("hidden");
       DOM.topicDesc.classList.remove("error");
     }
 
-    // Files
-    const files = collectFiles();
-    if (files.length === 0) {
-      alert("Please add at least one file.");
-      isValid = false;
+    /* Files */
+    if (collectFiles().length === 0) {
+      alert("Please add at least one file with a name or path.");
+      valid = false;
     }
 
-    return isValid;
+    return valid;
   }
 
+  /* Clear errors on input */
+  DOM.topicTitle.addEventListener("input", () => {
+    if (DOM.topicTitle.value.trim()) {
+      DOM.titleError.classList.add("hidden");
+      DOM.topicTitle.classList.remove("error");
+    }
+  });
+  DOM.topicDesc.addEventListener("input", () => {
+    if (DOM.topicDesc.value.trim()) {
+      DOM.descError.classList.add("hidden");
+      DOM.topicDesc.classList.remove("error");
+    }
+  });
+
   /* ============================================
-     JSON GENERATION
+     JSON GENERATION  ← topicFile fix is here
      ============================================ */
 
   function generateJSON() {
     if (!validateForm()) return;
 
-    const config = LANG_CONFIG[state.selectedLang];
-    const title = DOM.topicTitle.value.trim();
-    const id = DOM.topicId.value.trim() || utils.slugify(`${state.selectedLang}-${title}`);
-    const files = collectFiles();
-    const allTags = [...Array.from(state.selectedTags), ...state.customTags];
+    const config   = LANG_CONFIG[state.selectedLang];
+    const title    = DOM.topicTitle.value.trim();
+    const category = DOM.topicCategory.value.trim();
+    const id       = DOM.topicId.value.trim() ||
+                     utils.slugify(`${state.selectedLang}-${title}`);
+    const files    = collectFiles();
+    const allTags  = [
+      ...Array.from(state.selectedTags),
+      ...state.customTags
+    ];
 
-    // Topic JSON
+    /* ── topicFile: use first file's name, swap extension to .json ── */
+    const firstFileName  = files[0].fileName;               // e.g. for-loop-basic.c
+    const nameNoExt      = utils.stripExtension(firstFileName); // → for-loop-basic
+    const topicFilePath  =
+      `data/topics/${config.folder}/${nameNoExt}.json`;     // → data/topics/c/for-loop-basic.json
+
+    /* ── Topic JSON (saved to data/topics/<lang>/<name>.json) ── */
     const topicJSON = {
       topic: {
         id,
         title,
-        language: state.selectedLang,
-        category: DOM.topicCategory.value,
+        language:   state.selectedLang,
+        category:   category || undefined,   // omit if empty
         difficulty: DOM.topicDifficulty.value,
         dateCreated: utils.nowISO(),
         lastUpdated: utils.nowISO(),
-        tags: allTags,
+        tags:        allTags,
         description: DOM.topicDesc.value.trim(),
         learningNotes: {
           whatILearned: DOM.whatLearned.value.trim(),
-          challenges: DOM.challenges.value.trim(),
-          nextSteps: DOM.nextSteps.value.trim()
+          challenges:   DOM.challenges.value.trim(),
+          nextSteps:    DOM.nextSteps.value.trim()
         }
       },
       files
     };
 
-    // Index Entry
+    /* ── Index entry (goes into index.json topics array) ── */
     const indexEntry = {
       id,
       title,
-      language: state.selectedLang,
+      language:    state.selectedLang,
       dateCreated: utils.todayDate(),
       lastUpdated: utils.todayDate(),
-      fileCount: files.length,
-      tags: allTags,
+      fileCount:   files.length,
+      tags:        allTags,
       description: DOM.topicDesc.value.trim().slice(0, 220),
-      topicFile: `data/topics/${config.folder}/${utils.slugify(title.split(" in ")[0]) || utils.slugify(title)}.json`
+      topicFile:   topicFilePath          // ← FIXED: from filename, not title
     };
 
-    // Output topic JSON
+    /* ── Output: topic JSON ── */
     DOM.topicOutput.value = JSON.stringify(topicJSON, null, 2);
 
-    // Handle index output
+    /* ── Output: index.json (full rewrite OR snippet) ── */
     if (state.savedIndex) {
-      // Full rewrite
-      const existingIdx = state.savedIndex.topics.findIndex((t) => t.id === id);
-      if (existingIdx !== -1) {
-        const ok = confirm(`Topic "${id}" already exists.\n\nOK = replace\nCancel = abort`);
+      /* Check duplicate */
+      const existIdx = state.savedIndex.topics.findIndex((t) => t.id === id);
+      if (existIdx !== -1) {
+        const ok = confirm(
+          `Topic ID "${id}" already exists.\n\nOK = replace it\nCancel = abort`
+        );
         if (!ok) return;
-        state.savedIndex.topics.splice(existingIdx, 1);
+        state.savedIndex.topics.splice(existIdx, 1);
       }
 
       const updated = JSON.parse(JSON.stringify(state.savedIndex));
       updated.topics = [indexEntry, ...updated.topics];
       updated.metadata.totalTopics = updated.topics.length;
-      updated.metadata.totalFiles = updated.topics.reduce((s, t) => s + (t.fileCount || 0), 0);
+      updated.metadata.totalFiles  = updated.topics
+        .reduce((s, t) => s + (t.fileCount || 0), 0);
       updated.metadata.lastUpdated = utils.nowISO();
 
-      if (!Array.isArray(updated.metadata.languages)) updated.metadata.languages = [];
-      if (!updated.metadata.languages.includes(state.selectedLang)) {
+      if (!Array.isArray(updated.metadata.languages))
+        updated.metadata.languages = [];
+      if (!updated.metadata.languages.includes(state.selectedLang))
         updated.metadata.languages.push(state.selectedLang);
-      }
-
-      if (!updated.metadata.firstEntryDate) {
+      if (!updated.metadata.firstEntryDate)
         updated.metadata.firstEntryDate = indexEntry.dateCreated;
-      }
 
       state.savedIndex = updated;
       utils.saveToLS(LS_KEYS.INDEX, updated);
       renderIndexStatus();
 
-      DOM.indexOutput.value = JSON.stringify(updated, null, 2);
+      DOM.indexOutput.value        = JSON.stringify(updated, null, 2);
       DOM.indexOutputTitle.textContent = "2 · Complete index.json (updated)";
-      DOM.indexOutputHint.innerHTML = `Your <b>full rewritten index.json</b> — download and replace <code>data/index.json</code>`;
+      DOM.indexOutputHint.innerHTML =
+        `Your <b>full rewritten index.json</b> — download and replace <code>data/index.json</code>.`;
       DOM.downloadIndexBtn.classList.remove("hidden");
+
     } else {
-      // Snippet only
-      DOM.indexOutput.value = JSON.stringify(indexEntry, null, 2);
-      DOM.indexOutputTitle.textContent = "2 · index.json Entry";
-      DOM.indexOutputHint.innerHTML = `Paste this inside <code>"topics": []</code> array, then update metadata manually. <b>Tip:</b> Upload your index.json to get automatic rewrites.`;
+      DOM.indexOutput.value        = JSON.stringify(indexEntry, null, 2);
+      DOM.indexOutputTitle.textContent = "2 · index.json Entry (snippet)";
+      DOM.indexOutputHint.innerHTML =
+        `Paste inside the <code>"topics": []</code> array of <code>data/index.json</code>, ` +
+        `then update <code>totalTopics</code>, <code>totalFiles</code>, <code>languages</code> ` +
+        `and <code>lastUpdated</code> manually. ` +
+        `<b>Tip:</b> Upload your index.json above for automatic rewrites.`;
       DOM.downloadIndexBtn.classList.add("hidden");
     }
 
-    // Show success feedback
-    const btnText = DOM.generateBtn.querySelector(".btn-text");
+    /* ── Button feedback ── */
+    const btnText   = DOM.generateBtn.querySelector(".btn-text");
     const btnLoader = DOM.generateBtn.querySelector(".btn-loader");
     btnText.classList.add("hidden");
     btnLoader.classList.remove("hidden");
-    
     setTimeout(() => {
       btnText.classList.remove("hidden");
       btnLoader.classList.add("hidden");
@@ -1858,8 +1868,13 @@
      ============================================ */
 
   function adoptIndex(parsed) {
-    if (!parsed || !parsed.topics || !Array.isArray(parsed.topics)) {
-      throw new Error('Invalid index.json structure (missing "topics" array)');
+    if (
+      !parsed ||
+      typeof parsed !== "object" ||
+      Array.isArray(parsed) ||
+      !Array.isArray(parsed.topics)
+    ) {
+      throw new Error('Invalid index.json — missing "topics" array.');
     }
     if (!parsed.metadata || typeof parsed.metadata !== "object") {
       parsed.metadata = {};
@@ -1871,127 +1886,114 @@
 
   function renderIndexStatus() {
     if (state.savedIndex) {
-      const m = state.savedIndex.metadata || {};
-      const n = state.savedIndex.topics.length;
-      const files = m.totalFiles || "?";
+      const m     = state.savedIndex.metadata || {};
+      const n     = state.savedIndex.topics.length;
+      const files = typeof m.totalFiles === "number" ? m.totalFiles : "?";
       DOM.indexStatusPill.textContent = "Loaded ✓";
       DOM.indexStatusPill.classList.add("loaded");
-      DOM.indexStatusText.innerHTML = `Storing <b>${n}</b> topic${n === 1 ? "" : "s"} · ${files} files · last updated <code>${utils.escapeHTML(m.lastUpdated || "—")}</code>`;
+      DOM.indexStatusText.innerHTML =
+        `Storing <b>${n}</b> topic${n === 1 ? "" : "s"} · ` +
+        `${files} files · last updated ` +
+        `<code>${utils.escapeHTML(m.lastUpdated || "—")}</code>. ` +
+        `Every generate merges the new entry and rewrites this stored copy.`;
       DOM.indexRemoveBtn.classList.remove("hidden");
     } else {
       DOM.indexStatusPill.textContent = "Not loaded";
       DOM.indexStatusPill.classList.remove("loaded");
-      DOM.indexStatusText.innerHTML = `Upload your <code>data/index.json</code> once — it's stored in this browser and automatically updated on each generation.`;
+      DOM.indexStatusText.innerHTML =
+        `Upload your <code>data/index.json</code> once — stored in this browser. ` +
+        `From then on, every generation gives you the <b>full rewritten file</b> automatically.`;
       DOM.indexRemoveBtn.classList.add("hidden");
     }
   }
 
+  /* Upload */
   DOM.indexFile.addEventListener("change", (e) => {
     const file = e.target.files[0];
     if (!file) return;
     const reader = new FileReader();
     reader.onload = () => {
-      try {
-        adoptIndex(JSON.parse(reader.result));
-      } catch (err) {
-        alert("Failed to load index.json: " + err.message);
-      }
+      try   { adoptIndex(JSON.parse(reader.result)); }
+      catch (err) { alert("Could not load index.json: " + err.message); }
     };
     reader.readAsText(file);
     e.target.value = "";
   });
 
+  /* Paste toggle */
   DOM.indexPasteToggle.addEventListener("click", () => {
     DOM.indexPasteBox.classList.toggle("hidden");
   });
 
+  /* Load from paste */
   DOM.indexPasteLoad.addEventListener("click", () => {
     const raw = DOM.indexPasteArea.value.trim();
-    if (!raw) {
-      alert("Paste your index.json first.");
-      return;
-    }
+    if (!raw) { alert("Paste your index.json contents first."); return; }
     try {
       adoptIndex(JSON.parse(raw));
       DOM.indexPasteBox.classList.add("hidden");
       DOM.indexPasteArea.value = "";
     } catch (err) {
-      alert("Failed to parse: " + err.message);
+      alert("Could not parse: " + err.message);
     }
   });
 
+  /* Remove stored */
   DOM.indexRemoveBtn.addEventListener("click", () => {
-    if (!confirm("Remove stored index.json from browser?")) return;
+    if (!confirm("Remove the stored index.json from this browser?\n(Your repo file is not touched.)"))
+      return;
     state.savedIndex = null;
     utils.removeFromLS(LS_KEYS.INDEX);
     renderIndexStatus();
   });
 
+  /* Download full index */
   DOM.downloadIndexBtn.addEventListener("click", () => {
     if (!state.savedIndex) return;
-    const blob = new Blob([JSON.stringify(state.savedIndex, null, 2)], {
-      type: "application/json"
-    });
+    const blob = new Blob(
+      [JSON.stringify(state.savedIndex, null, 2)],
+      { type: "application/json" }
+    );
     const url = URL.createObjectURL(blob);
-    const a = document.createElement("a");
-    a.href = url;
-    a.download = "index.json";
-    document.body.appendChild(a);
-    a.click();
-    a.remove();
+    const a   = document.createElement("a");
+    a.href = url; a.download = "index.json";
+    document.body.appendChild(a); a.click(); a.remove();
     setTimeout(() => URL.revokeObjectURL(url), 4000);
   });
 
   /* ============================================
-     COPY / DOWNLOAD
+     COPY / DOWNLOAD HELPERS
      ============================================ */
 
   async function copyText(text, btn) {
+    if (!text) { alert("Generate JSON first."); return; }
     try {
       await navigator.clipboard.writeText(text);
       const old = btn.textContent;
       btn.textContent = "Copied!";
-      setTimeout(() => {
-        btn.textContent = old;
-      }, 1500);
+      setTimeout(() => { btn.textContent = old; }, 1500);
     } catch (e) {
-      alert("Copy failed. Please select and copy manually.");
+      alert("Copy failed — please select and copy manually.");
     }
   }
 
-  DOM.copyTopicBtn.addEventListener("click", () => {
-    const text = DOM.topicOutput.value;
-    if (!text) {
-      alert("Generate JSON first.");
-      return;
-    }
-    copyText(text, DOM.copyTopicBtn);
-  });
-
-  DOM.copyIndexBtn.addEventListener("click", () => {
-    const text = DOM.indexOutput.value;
-    if (!text) {
-      alert("Generate JSON first.");
-      return;
-    }
-    copyText(text, DOM.copyIndexBtn);
-  });
+  DOM.copyTopicBtn.addEventListener("click", () =>
+    copyText(DOM.topicOutput.value, DOM.copyTopicBtn)
+  );
+  DOM.copyIndexBtn.addEventListener("click", () =>
+    copyText(DOM.indexOutput.value, DOM.copyIndexBtn)
+  );
 
   DOM.downloadTopicBtn.addEventListener("click", () => {
     const text = DOM.topicOutput.value;
-    if (!text) {
-      alert("Generate JSON first.");
-      return;
-    }
-    const id = (DOM.topicId.value.trim() || "topic").replace(/[^a-z0-9-]/gi, "-");
+    if (!text) { alert("Generate JSON first."); return; }
+    const id   = (DOM.topicId.value.trim() || "topic")
+                   .replace(/[^a-z0-9-]/gi, "-").toLowerCase();
     const blob = new Blob([text], { type: "application/json" });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement("a");
-    a.href = url;
-    a.download = `${id}.json`;
-    document.body.appendChild(a);
-    a.click();
-    a.remove();
+    const url  = URL.createObjectURL(blob);
+    const a    = document.createElement("a");
+    a.href = url; a.download = `${id}.json`;
+    document.body.appendChild(a); a.click(); a.remove();
     setTimeout(() => URL.revokeObjectURL(url), 4000);
   });
 
@@ -2002,31 +2004,34 @@
   DOM.loadSampleBtn.addEventListener("click", () => {
     DOM.langSelect.value = "C";
     handleLanguageChange();
-    
-    // Select template
-    selectTopicTemplate(3); // If-Else Statement
-    
-    // Customize
-    DOM.topicDesc.value = "Understanding conditional execution in C using if-else statements. Covers basic decision making, nested conditions, and practical examples.";
-    DOM.whatLearned.value = "How to use if-else for decision making. Learned about condition evaluation and code branching.";
-    DOM.challenges.value = "Initially confused about nested if-else blocks. Solved by using proper indentation.";
-    DOM.nextSteps.value = "Study switch statements and ternary operators for more efficient branching.";
+    selectTopicTemplate(3); /* If-Else Statement */
 
-    // Add files
+    DOM.topicDesc.value   =
+      "Conditional execution in C using if-else. Covers basic decisions, " +
+      "nested conditions, and practical real-world examples.";
+    DOM.whatLearned.value =
+      "How to use if-else for decision making. Learned about boolean " +
+      "condition evaluation and branching logic.";
+    DOM.challenges.value  =
+      "Initially confused about nested if-else indentation. " +
+      "Resolved by drawing out the logic flow first.";
+    DOM.nextSteps.value   =
+      "Study switch statements and ternary operators for cleaner branching.";
+
     DOM.fileRows.innerHTML = "";
     addFileRow({
-      name: "if-else-basic.c",
-      path: "content/c/if-else-basic.c",
-      desc: "Basic if-else examples with simple conditions",
+      name:  "if-else-basic.c",
+      path:  "content/c/if-else-basic.c",
+      desc:  "Basic if-else examples with simple conditions",
       lines: 45,
-      size: "1.1KB"
+      size:  "1.1KB"
     });
     addFileRow({
-      name: "if-else-nested.c",
-      path: "content/c/if-else-nested.c",
-      desc: "Nested if-else statements for complex decision trees",
+      name:  "if-else-nested.c",
+      path:  "content/c/if-else-nested.c",
+      desc:  "Nested if-else for complex decision trees",
       lines: 62,
-      size: "1.5KB"
+      size:  "1.5KB"
     });
   });
 
@@ -2035,30 +2040,33 @@
      ============================================ */
 
   DOM.clearFormBtn.addEventListener("click", () => {
-    if (!confirm("Clear all form data?")) return;
+    if (!confirm("Clear all form data? (Stored index.json is kept.)")) return;
 
-    DOM.topicTitle.value = "";
-    DOM.topicDesc.value = "";
-    DOM.whatLearned.value = "";
-    DOM.challenges.value = "";
-    DOM.nextSteps.value = "";
-    DOM.customTags.value = "";
-    DOM.topicOutput.value = "";
-    DOM.indexOutput.value = "";
+    [
+      DOM.topicTitle, DOM.topicDesc, DOM.whatLearned,
+      DOM.challenges, DOM.nextSteps, DOM.customTags,
+      DOM.topicOutput, DOM.indexOutput, DOM.topicId
+    ].forEach((el) => { el.value = ""; });
 
     state.selectedTags.clear();
-    state.customTags = [];
-    state.selectedTemplate = null;
+    state.customTags        = [];
+    state.selectedTemplate  = null;
     state.currentDescStarter = "";
-    state.idTouched = false;
+    state.idTouched         = false;
 
     DOM.fileRows.innerHTML = "";
     addFileRow();
 
     renderSelectedTags();
     updateTagPillsState();
-    $$(".topic-chip").forEach((c) => c.classList.remove("active"));
+    DOM.topicTemplates.querySelectorAll(".topic-chip")
+      .forEach((c) => c.classList.remove("active"));
     DOM.useDescStarter.classList.add("hidden");
+    DOM.titleError.classList.add("hidden");
+    DOM.descError.classList.add("hidden");
+    DOM.topicTitle.classList.remove("error");
+    DOM.topicDesc.classList.remove("error");
+
     updateTopicId();
   });
 
@@ -2067,22 +2075,22 @@
      ============================================ */
 
   if (DOM.themeToggle) {
-    const sunSVG = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>';
-    const moonSVG = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+    const SUN  = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>';
+    const MOON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
 
     const syncTheme = () => {
       const isLight = document.documentElement.getAttribute("data-theme") === "light";
-      DOM.themeToggle.innerHTML = isLight ? moonSVG : sunSVG;
+      DOM.themeToggle.innerHTML = isLight ? MOON : SUN;
     };
 
     DOM.themeToggle.addEventListener("click", () => {
       const isLight = document.documentElement.getAttribute("data-theme") === "light";
       if (isLight) {
         document.documentElement.removeAttribute("data-theme");
-        utils.saveToLS(LS_KEYS.THEME, "dark");
+        localStorage.setItem(LS_KEYS.THEME, "dark");
       } else {
         document.documentElement.setAttribute("data-theme", "light");
-        utils.saveToLS(LS_KEYS.THEME, "light");
+        localStorage.setItem(LS_KEYS.THEME, "light");
       }
       syncTheme();
     });
@@ -2091,28 +2099,26 @@
   }
 
   /* ============================================
-     INITIALIZATION
+     INIT / BOOT
      ============================================ */
 
   function init() {
-    // Load saved index
-    const savedIdx = utils.loadFromLS(LS_KEYS.INDEX);
-    if (savedIdx) {
-      try {
-        adoptIndex(savedIdx);
-      } catch (e) {
-        console.warn("Failed to load saved index:", e);
-      }
+    /* Restore saved index */
+    const saved = utils.loadFromLS(LS_KEYS.INDEX);
+    if (saved) {
+      try { adoptIndex(saved); }
+      catch (e) { console.warn("Saved index invalid, clearing.", e); }
     }
 
     renderIndexStatus();
 
-    // Initialize language
+    /* Set up language defaults */
     handleLanguageChange();
 
-    // Add initial file row
+    /* Start with one empty file row */
     addFileRow();
   }
 
   init();
+
 })();

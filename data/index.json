@@ -1,10 +1,10 @@
 {
   "metadata": {
     "siteName": "Learning Archive",
-    "lastUpdated": "2026-08-06T18:10:52Z",
+    "lastUpdated": "2026-08-07T08:55:23Z",
     "firstEntryDate": "2026-01-08",
-    "totalTopics": 8,
-    "totalFiles": 8,
+    "totalTopics": 9,
+    "totalFiles": 9,
     "languages": [
       "C",
       "Python",
@@ -12,6 +12,23 @@
     ]
   },
   "topics": [
+    {
+      "id": "c-for-loop-in-c",
+      "title": "For Loop in C",
+      "language": "C",
+      "dateCreated": "2026-08-07",
+      "lastUpdated": "2026-08-07",
+      "fileCount": 1,
+      "tags": [
+        "for-loop",
+        "loops",
+        "iteration",
+        "input",
+        "scanf"
+      ],
+      "description": "Iteration using for loops. Understanding loop initialization, condition, and increment/decrement.",
+      "topicFile": "data/topics/c/for-loop-factorial.json"
+    },
     {
       "id": "c-if-else-statement-in-c",
       "title": "If-Else Statement in C",
@@ -25,7 +42,7 @@
         "printf"
       ],
       "description": "Conditional execution using if-else statements. Decision making and branching logic in C programs.",
-      "topicFile": "data/topics/c/ticket-price-calculator.json"
+      "topicFile": "data/topics/c/if-else-statement.json"
     },
     {
       "id": "c-grade-calculator",

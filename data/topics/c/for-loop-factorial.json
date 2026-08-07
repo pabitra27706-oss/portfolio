@@ -1,0 +1,33 @@
+{
+  "topic": {
+    "id": "c-for-loop-in-c",
+    "title": "For Loop in C",
+    "language": "C",
+    "category": "Control Flow",
+    "difficulty": "beginner",
+    "dateCreated": "2026-08-07T08:55:23Z",
+    "lastUpdated": "2026-08-07T08:55:23Z",
+    "tags": [
+      "for-loop",
+      "loops",
+      "iteration",
+      "input",
+      "scanf"
+    ],
+    "description": "Iteration using for loops. Understanding loop initialization, condition, and increment/decrement.",
+    "learningNotes": {
+      "whatILearned": "How the for loop works.",
+      "challenges": "The ; and , are wrongly placed.",
+      "nextSteps": "More practice."
+    }
+  },
+  "files": [
+    {
+      "id": "file-001",
+      "fileName": "factorial-calculator.c",
+      "filePath": "content/c/factorial-calculator.c",
+      "description": "Factorial of any integer numbers.",
+      "dateAdded": "2026-08-07T08:55:23Z"
+    }
+  ]
+}
