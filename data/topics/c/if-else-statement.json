@@ -1,0 +1,33 @@
+{
+  "topic": {
+    "id": "c-nasted-if-else-statement-in-c",
+    "title": "Nasted If-Else Statement in C",
+    "language": "C",
+    "category": "Control Flow",
+    "difficulty": "beginner",
+    "dateCreated": "2026-08-07T09:40:33Z",
+    "lastUpdated": "2026-08-07T09:40:33Z",
+    "tags": [
+      "if-else",
+      "control-flow",
+      "printf",
+      "output",
+      "conditional"
+    ],
+    "description": "Conditional execution using if-else statements. Decision making and branching logic in C programs.",
+    "learningNotes": {
+      "whatILearned": "Nested if-else",
+      "challenges": "",
+      "nextSteps": ""
+    }
+  },
+  "files": [
+    {
+      "id": "file-001",
+      "fileName": "nasted-if-else-for-max-no-find.c",
+      "filePath": "content/c/nasted-if-else-for-max-no-find.c",
+      "description": "",
+      "dateAdded": "2026-08-07T09:40:33Z"
+    }
+  ]
+}

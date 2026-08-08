@@ -1,0 +1,31 @@
+{
+  "topic": {
+    "id": "c-for-loop-example",
+    "title": "For Loop Example",
+    "language": "C",
+    "category": "Control Flow",
+    "difficulty": "beginner",
+    "dateCreated": "2026-08-08T12:10:12Z",
+    "lastUpdated": "2026-08-08T12:10:12Z",
+    "tags": [
+      "for-loop",
+      "loops",
+      "iteration"
+    ],
+    "description": "Iteration using for loops. Understanding loop initialization, condition, and increment/decrement.",
+    "learningNotes": {
+      "whatILearned": "Ai generated.",
+      "challenges": "Nothing",
+      "nextSteps": "I will try."
+    }
+  },
+  "files": [
+    {
+      "id": "file-001",
+      "fileName": "for-loop-example.c",
+      "filePath": "content/c/for-loop-example.c",
+      "description": "",
+      "dateAdded": "2026-08-08T12:10:12Z"
+    }
+  ]
+}
