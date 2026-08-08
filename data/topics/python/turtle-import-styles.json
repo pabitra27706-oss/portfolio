@@ -1,0 +1,32 @@
+{
+  "topic": {
+    "id": "python-turtle-import-styles",
+    "title": "Turtle Import Styles",
+    "language": "Python",
+    "category": "Functions & Modules",
+    "difficulty": "Intermediate",
+    "dateCreated": "2026-01-11T10:00:00Z",
+    "lastUpdated": "2026-01-11T10:00:00Z",
+    "tags": [
+      "turtle",
+      "import",
+      "alias",
+      "modules"
+    ],
+    "description": "Demonstrates three ways to import the Turtle module: import turtle, from turtle import Turtle, and import turtle as t. Clarifies Python import mechanics.",
+    "learningNotes": {
+      "whatILearned": "The difference between module-level imports and object imports, and how aliases reduce typing.",
+      "challenges": "Understanding namespace differences between each import style.",
+      "nextSteps": "Apply import patterns to other standard library modules."
+    }
+  },
+  "files": [
+    {
+      "id": "file-001",
+      "fileName": "Bassic_knowledge.py",
+      "filePath": "content/python/Bassic_knowledge.py",
+      "description": "Three import style examples for the turtle module.",
+      "dateAdded": "2026-01-11T10:00:00Z"
+    }
+  ]
+}

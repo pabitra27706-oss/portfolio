@@ -1,0 +1,33 @@
+{
+  "topic": {
+    "id": "python-blackjack",
+    "title": "Blackjack Game",
+    "language": "Python",
+    "category": "Control Flow",
+    "difficulty": "Intermediate",
+    "dateCreated": "2026-01-17T10:00:00Z",
+    "lastUpdated": "2026-01-17T10:00:00Z",
+    "tags": [
+      "lists",
+      "random",
+      "conditionals",
+      "game",
+      "cards"
+    ],
+    "description": "A text-based Blackjack (21) game against the computer. Implements card drawing, Ace value adjustment (11→1), and computer AI that draws until 17.",
+    "learningNotes": {
+      "whatILearned": "Using a list to represent a deck, randomly drawing cards, handling the special Ace case, and implementing simple computer AI logic.",
+      "challenges": "Correctly reducing Ace from 11 to 1 when the hand total exceeds 21 without over-correcting.",
+      "nextSteps": "Add betting mechanics, split, and double-down options."
+    }
+  },
+  "files": [
+    {
+      "id": "file-001",
+      "fileName": "Black_jack.py",
+      "filePath": "content/python/Black_jack.py",
+      "description": "Full Blackjack game with Ace handling and computer AI.",
+      "dateAdded": "2026-01-17T10:00:00Z"
+    }
+  ]
+}

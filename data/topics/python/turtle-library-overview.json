@@ -1,0 +1,32 @@
+{
+  "topic": {
+    "id": "python-turtle-library",
+    "title": "Turtle Library Overview",
+    "language": "Python",
+    "category": "Basics & Syntax",
+    "difficulty": "Intermediate",
+    "dateCreated": "2026-01-11T10:00:00Z",
+    "lastUpdated": "2026-01-11T10:00:00Z",
+    "tags": [
+      "turtle",
+      "screen",
+      "canvas",
+      "attributes"
+    ],
+    "description": "Explores Turtle module attributes: printing the turtle object reference and reading screen canvas dimensions. Builds familiarity with the turtle environment.",
+    "learningNotes": {
+      "whatILearned": "Accessing screen properties like canvwidth, and understanding that turtle methods return objects with their own attributes.",
+      "challenges": "Understanding the difference between the Turtle object and the Screen object.",
+      "nextSteps": "Explore pen properties: pencolor, fillcolor, pensize."
+    }
+  },
+  "files": [
+    {
+      "id": "file-001",
+      "fileName": "Turtle_library.py",
+      "filePath": "content/python/Turtle_library.py",
+      "description": "Prints turtle object info and screen canvas width.",
+      "dateAdded": "2026-01-11T10:00:00Z"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "topic": {
+    "id": "python-turtle-square",
+    "title": "Turtle Square Challenge",
+    "language": "Python",
+    "category": "Control Flow",
+    "difficulty": "Intermediate",
+    "dateCreated": "2026-01-11T10:00:00Z",
+    "lastUpdated": "2026-01-11T10:00:00Z",
+    "tags": [
+      "turtle",
+      "loops",
+      "geometry",
+      "challenge"
+    ],
+    "description": "Draws a square by repeating forward and right-turn movements in a for loop. A focused challenge connecting loop logic with turtle geometry.",
+    "learningNotes": {
+      "whatILearned": "Using a for loop to repeat turtle steps and calculating that a square needs four 90-degree turns.",
+      "challenges": "None — straightforward geometric loop exercise.",
+      "nextSteps": "Draw a triangle, pentagon, and hexagon. Generalise with a function."
+    }
+  },
+  "files": [
+    {
+      "id": "file-001",
+      "fileName": "3_turtle_challange.py",
+      "filePath": "content/python/3_turtle_challange.py",
+      "description": "Draws a square using a for loop.",
+      "dateAdded": "2026-01-11T10:00:00Z"
+    }
+  ]
+}

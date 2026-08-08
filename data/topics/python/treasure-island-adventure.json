@@ -1,0 +1,32 @@
+{
+  "topic": {
+    "id": "python-treasure-island",
+    "title": "Treasure Island Adventure",
+    "language": "Python",
+    "category": "Control Flow",
+    "difficulty": "Beginner",
+    "dateCreated": "2026-01-04T10:00:00Z",
+    "lastUpdated": "2026-01-04T10:00:00Z",
+    "tags": [
+      "conditionals",
+      "input",
+      "game",
+      "nested-if"
+    ],
+    "description": "A text-based adventure game where choices determine whether the player finds treasure or meets their end. Solidifies understanding of nested if-else branching.",
+    "learningNotes": {
+      "whatILearned": "Building a multi-path story using deeply nested conditionals and user input validation.",
+      "challenges": "Managing all possible paths and ensuring every branch has an outcome.",
+      "nextSteps": "Add loops for replay and introduce randomness."
+    }
+  },
+  "files": [
+    {
+      "id": "file-001",
+      "fileName": "trasure island.py",
+      "filePath": "content/python/trasure island.py",
+      "description": "Text adventure with multiple branching choices.",
+      "dateAdded": "2026-01-04T10:00:00Z"
+    }
+  ]
+}

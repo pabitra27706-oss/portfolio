@@ -1,0 +1,32 @@
+{
+  "topic": {
+    "id": "python-hangman-step-3",
+    "title": "Hangman Step 3",
+    "language": "Python",
+    "category": "Control Flow",
+    "difficulty": "Beginner",
+    "dateCreated": "2026-01-07T10:00:00Z",
+    "lastUpdated": "2026-01-07T10:00:00Z",
+    "tags": [
+      "while-loop",
+      "lists",
+      "game",
+      "win-condition"
+    ],
+    "description": "Adds a while loop so the player keeps guessing until the word is fully revealed. Introduces loop termination based on a win condition.",
+    "learningNotes": {
+      "whatILearned": "Using a while loop that checks if any blanks remain in the display list to continue or stop the game.",
+      "challenges": "Updating the display list correctly on each iteration and detecting the win.",
+      "nextSteps": "Step 4: add lives counter and ASCII art stages."
+    }
+  },
+  "files": [
+    {
+      "id": "file-001",
+      "fileName": "Day7 update.py",
+      "filePath": "content/python/Day7 update.py",
+      "description": "Hangman step 3: while loop for repeated guessing.",
+      "dateAdded": "2026-01-07T10:00:00Z"
+    }
+  ]
+}

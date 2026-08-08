@@ -1,0 +1,32 @@
+{
+  "topic": {
+    "id": "python-if-statement-practice",
+    "title": "If Statement Practice",
+    "language": "Python",
+    "category": "Control Flow",
+    "difficulty": "Beginner",
+    "dateCreated": "2026-01-04T10:00:00Z",
+    "lastUpdated": "2026-01-04T10:00:00Z",
+    "tags": [
+      "conditionals",
+      "input",
+      "nested-if",
+      "elif"
+    ],
+    "description": "Checks height and age for a rollercoaster ride, calculates ticket price, and offers a photo add-on. A practical multi-condition exercise.",
+    "learningNotes": {
+      "whatILearned": "Nested if-elif-else statements and building a bill by accumulating costs conditionally.",
+      "challenges": "Correctly nesting conditions and keeping track of the running bill variable.",
+      "nextSteps": "Add more ride types and group discount logic."
+    }
+  },
+  "files": [
+    {
+      "id": "file-001",
+      "fileName": "If statement details.py",
+      "filePath": "content/python/If statement details.py",
+      "description": "Rollercoaster ticket price calculator.",
+      "dateAdded": "2026-01-04T10:00:00Z"
+    }
+  ]
+}

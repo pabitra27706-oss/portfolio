@@ -1,0 +1,32 @@
+{
+  "topic": {
+    "id": "python-prettytable",
+    "title": "PrettyTable Demo",
+    "language": "Python",
+    "category": "Data Science",
+    "difficulty": "Intermediate",
+    "dateCreated": "2026-01-19T10:00:00Z",
+    "lastUpdated": "2026-01-19T10:00:00Z",
+    "tags": [
+      "prettytable",
+      "tables",
+      "data-display",
+      "libraries"
+    ],
+    "description": "Uses the PrettyTable library to display structured tabular data with a Pokémon example. Introduces third-party library usage and table formatting.",
+    "learningNotes": {
+      "whatILearned": "Installing PrettyTable via pip, adding columns of data, setting alignment, and printing a formatted table to the console.",
+      "challenges": "None — library is straightforward. Focus is on understanding library documentation.",
+      "nextSteps": "Display data loaded from a CSV file or an API response in a PrettyTable."
+    }
+  },
+  "files": [
+    {
+      "id": "file-001",
+      "fileName": "Table.py",
+      "filePath": "content/python/Table.py",
+      "description": "PrettyTable demo with Pokémon dataset.",
+      "dateAdded": "2026-01-19T10:00:00Z"
+    }
+  ]
+}

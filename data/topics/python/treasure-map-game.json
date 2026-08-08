@@ -1,0 +1,33 @@
+{
+  "topic": {
+    "id": "python-treasure-map",
+    "title": "Treasure Map Game",
+    "language": "Python",
+    "category": "Basics & Syntax",
+    "difficulty": "Beginner",
+    "dateCreated": "2026-01-04T10:00:00Z",
+    "lastUpdated": "2026-01-04T10:00:00Z",
+    "tags": [
+      "lists",
+      "indexing",
+      "input",
+      "2d",
+      "nested-lists"
+    ],
+    "description": "Places a treasure marker on a 3×3 grid by converting user row/column input to list indices. Introduces 2D lists and index manipulation.",
+    "learningNotes": {
+      "whatILearned": "Representing a grid with a nested list and modifying specific elements using row/column indices.",
+      "challenges": "Converting 1-based user input to 0-based list indices.",
+      "nextSteps": "Scale to a larger grid and add obstacles."
+    }
+  },
+  "files": [
+    {
+      "id": "file-001",
+      "fileName": "Treasure map day4.py",
+      "filePath": "content/python/Treasure map day4.py",
+      "description": "Places an X marker on a 3×3 grid.",
+      "dateAdded": "2026-01-04T10:00:00Z"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "topic": {
+    "id": "python-random-payer",
+    "title": "Random Bill Payer",
+    "language": "Python",
+    "category": "Basics & Syntax",
+    "difficulty": "Beginner",
+    "dateCreated": "2026-01-03T10:00:00Z",
+    "lastUpdated": "2026-01-03T10:00:00Z",
+    "tags": [
+      "random",
+      "lists",
+      "input",
+      "split"
+    ],
+    "description": "Randomly selects a person from a comma-separated list of names to pay the bill. Introduces random.choice and string splitting.",
+    "learningNotes": {
+      "whatILearned": "Splitting a string by delimiter into a list and using random.choice to pick a random element.",
+      "challenges": "Handling extra spaces after splitting.",
+      "nextSteps": "Add weighted probability so some people pay more often."
+    }
+  },
+  "files": [
+    {
+      "id": "file-001",
+      "fileName": "who will pay.py",
+      "filePath": "content/python/who will pay.py",
+      "description": "Randomly selects a name from user-entered list.",
+      "dateAdded": "2026-01-03T10:00:00Z"
+    }
+  ]
+}

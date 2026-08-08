@@ -1,0 +1,32 @@
+{
+  "topic": {
+    "id": "python-days-in-month",
+    "title": "Days in Month Calculator",
+    "language": "Python",
+    "category": "Functions & Modules",
+    "difficulty": "Beginner",
+    "dateCreated": "2026-01-09T10:00:00Z",
+    "lastUpdated": "2026-01-09T10:00:00Z",
+    "tags": [
+      "functions",
+      "conditionals",
+      "lists",
+      "leap-year"
+    ],
+    "description": "Determines the number of days in any given month for any year, accounting correctly for leap years. Combines function design with list indexing.",
+    "learningNotes": {
+      "whatILearned": "Encapsulating leap year logic in a helper function and using a list of month-day counts indexed by month number.",
+      "challenges": "Correctly adjusting February days when the year is a leap year.",
+      "nextSteps": "Extend to calculate the number of days between two dates."
+    }
+  },
+  "files": [
+    {
+      "id": "file-001",
+      "fileName": "Days_in_month.py",
+      "filePath": "content/python/Days_in_month.py",
+      "description": "Returns days in a month with leap year support.",
+      "dateAdded": "2026-01-09T10:00:00Z"
+    }
+  ]
+}

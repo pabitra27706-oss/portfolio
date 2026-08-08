@@ -1,0 +1,32 @@
+{
+  "topic": {
+    "id": "python-basic-calculator",
+    "title": "Basic Calculator",
+    "language": "Python",
+    "category": "Functions & Modules",
+    "difficulty": "Beginner",
+    "dateCreated": "2026-01-08T10:00:00Z",
+    "lastUpdated": "2026-01-08T10:00:00Z",
+    "tags": [
+      "functions",
+      "arithmetic",
+      "dictionary",
+      "operators"
+    ],
+    "description": "A simple four-operation calculator using functions stored in a dictionary. Demonstrates how to map operators to functions for clean dispatch logic.",
+    "learningNotes": {
+      "whatILearned": "Defining functions for each arithmetic operation and using a dictionary to select the right function based on operator input.",
+      "challenges": "Handling division by zero and invalid operator inputs gracefully.",
+      "nextSteps": "Add a loop for continuous calculation and support for more operations."
+    }
+  },
+  "files": [
+    {
+      "id": "file-001",
+      "fileName": "calculator_p1.py",
+      "filePath": "content/python/calculator_p1.py",
+      "description": "Four-operation calculator with dictionary dispatch.",
+      "dateAdded": "2026-01-08T10:00:00Z"
+    }
+  ]
+}

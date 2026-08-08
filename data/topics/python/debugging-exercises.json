@@ -1,0 +1,61 @@
+{
+  "topic": {
+    "id": "python-debugging-exercises",
+    "title": "Debugging Exercises",
+    "language": "Python",
+    "category": "Basics & Syntax",
+    "difficulty": "Intermediate",
+    "dateCreated": "2026-01-16T10:00:00Z",
+    "lastUpdated": "2026-01-16T10:00:00Z",
+    "tags": [
+      "debugging",
+      "errors",
+      "syntax",
+      "logic",
+      "control-flow"
+    ],
+    "description": "A collection of buggy programs covering off-by-one errors, type mismatches, indentation errors, and logical mistakes — each paired with a corrected version.",
+    "learningNotes": {
+      "whatILearned": "How to identify syntax errors (caught by interpreter immediately), runtime errors (crash during execution), and logical errors (wrong output silently). Using print statements to trace flow.",
+      "challenges": "Logical errors are hardest to find because the program runs without crashing.",
+      "nextSteps": "Learn Python logging module and try using pdb (Python debugger)."
+    }
+  },
+  "files": [
+    {
+      "id": "file-001",
+      "fileName": "Debug.py",
+      "filePath": "content/python/Debug.py",
+      "description": "Buggy program with range and off-by-one error.",
+      "dateAdded": "2026-01-16T10:00:00Z"
+    },
+    {
+      "id": "file-002",
+      "fileName": "Debug_solution.py",
+      "filePath": "content/python/Debug_solution.py",
+      "description": "Corrected version of Debug.py.",
+      "dateAdded": "2026-01-16T10:00:00Z"
+    },
+    {
+      "id": "file-003",
+      "fileName": "Debugging_fizz_buzz.py",
+      "filePath": "content/python/Debugging_fizz_buzz.py",
+      "description": "FizzBuzz with logical errors and correction.",
+      "dateAdded": "2026-01-16T10:00:00Z"
+    },
+    {
+      "id": "file-004",
+      "fileName": "Debugging_leap_year.py",
+      "filePath": "content/python/Debugging_leap_year.py",
+      "description": "Leap year checker with input type error fix.",
+      "dateAdded": "2026-01-16T10:00:00Z"
+    },
+    {
+      "id": "file-005",
+      "fileName": "Debug_odd_or_even.py",
+      "filePath": "content/python/Debug_odd_or_even.py",
+      "description": "Odd/even checker with comparison operator error.",
+      "dateAdded": "2026-01-16T10:00:00Z"
+    }
+  ]
+}

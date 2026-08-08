@@ -1,0 +1,31 @@
+{
+  "topic": {
+    "id": "python-variable-swap",
+    "title": "Variable Swap Practice",
+    "language": "Python",
+    "category": "Basics & Syntax",
+    "difficulty": "Beginner",
+    "dateCreated": "2026-01-01T10:00:00Z",
+    "lastUpdated": "2026-01-01T10:00:00Z",
+    "tags": [
+      "variables",
+      "assignment",
+      "temp-variable"
+    ],
+    "description": "A classic beginner exercise that swaps the values of two variables using a temporary variable. Builds understanding of assignment and memory.",
+    "learningNotes": {
+      "whatILearned": "How assignment works in Python and why a temporary variable is needed for swapping values.",
+      "challenges": "Understanding why direct swap (a = b; b = a) fails without a temp variable.",
+      "nextSteps": "Learn Python tuple unpacking: a, b = b, a."
+    }
+  },
+  "files": [
+    {
+      "id": "file-001",
+      "fileName": "Pythonveriablepractice.py",
+      "filePath": "content/python/Pythonveriablepractice.py",
+      "description": "Swaps two variables using a temporary variable.",
+      "dateAdded": "2026-01-01T10:00:00Z"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "topic": {
+    "id": "python-life-in-weeks",
+    "title": "Life in Weeks Calculator",
+    "language": "Python",
+    "category": "Basics & Syntax",
+    "difficulty": "Beginner",
+    "dateCreated": "2026-01-02T10:00:00Z",
+    "lastUpdated": "2026-01-02T10:00:00Z",
+    "tags": [
+      "arithmetic",
+      "input",
+      "variables",
+      "print"
+    ],
+    "description": "Given an age, calculates remaining days, weeks, and months assuming a 90-year lifespan. Practices basic arithmetic and string output formatting.",
+    "learningNotes": {
+      "whatILearned": "Performing arithmetic operations on user input and displaying multiple results clearly.",
+      "challenges": "Converting input string to integer before arithmetic.",
+      "nextSteps": "Make the lifespan configurable and add years remaining."
+    }
+  },
+  "files": [
+    {
+      "id": "file-001",
+      "fileName": "Life in weeks.py",
+      "filePath": "content/python/Life in weeks.py",
+      "description": "Remaining days, weeks, and months calculator.",
+      "dateAdded": "2026-01-02T10:00:00Z"
+    }
+  ]
+}

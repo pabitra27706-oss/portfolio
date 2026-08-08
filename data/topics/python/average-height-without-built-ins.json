@@ -1,0 +1,32 @@
+{
+  "topic": {
+    "id": "python-average-height-manual",
+    "title": "Average Height Without Built-ins",
+    "language": "Python",
+    "category": "Control Flow",
+    "difficulty": "Beginner",
+    "dateCreated": "2026-01-05T10:00:00Z",
+    "lastUpdated": "2026-01-05T10:00:00Z",
+    "tags": [
+      "lists",
+      "loops",
+      "average",
+      "accumulator"
+    ],
+    "description": "Calculates average height manually using a loop accumulator without sum() or len(). Deepens understanding of how built-in functions work internally.",
+    "learningNotes": {
+      "whatILearned": "Implementing accumulator pattern with a loop to build sum and count from scratch.",
+      "challenges": "Remembering to initialize both sum and count before the loop.",
+      "nextSteps": "Compare performance and readability with built-in approach."
+    }
+  },
+  "files": [
+    {
+      "id": "file-001",
+      "fileName": "Avg height without(sum+len).py",
+      "filePath": "content/python/Avg height without(sum+len).py",
+      "description": "Manual average height without built-ins.",
+      "dateAdded": "2026-01-05T10:00:00Z"
+    }
+  ]
+}

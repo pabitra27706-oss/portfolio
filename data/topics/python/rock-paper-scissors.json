@@ -1,0 +1,32 @@
+{
+  "topic": {
+    "id": "python-rock-paper-scissors",
+    "title": "Rock Paper Scissors",
+    "language": "Python",
+    "category": "Control Flow",
+    "difficulty": "Beginner",
+    "dateCreated": "2026-01-06T10:00:00Z",
+    "lastUpdated": "2026-01-06T10:00:00Z",
+    "tags": [
+      "random",
+      "conditionals",
+      "game",
+      "ascii-art"
+    ],
+    "description": "A text-based Rock Paper Scissors game against the computer with ASCII art displays. Consolidates conditionals, random choice, and user input handling.",
+    "learningNotes": {
+      "whatILearned": "Using random.randint to simulate computer choice, handling all win/draw/lose conditions, and validating user input.",
+      "challenges": "Covering all 9 possible outcome combinations without missing a case.",
+      "nextSteps": "Add a score tracker and best-of-five mode."
+    }
+  },
+  "files": [
+    {
+      "id": "file-001",
+      "fileName": "Rock paper scissors.py",
+      "filePath": "content/python/Rock paper scissors.py",
+      "description": "Rock Paper Scissors with ASCII art for each move.",
+      "dateAdded": "2026-01-06T10:00:00Z"
+    }
+  ]
+}

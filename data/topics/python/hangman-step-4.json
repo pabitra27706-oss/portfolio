@@ -1,0 +1,32 @@
+{
+  "topic": {
+    "id": "python-hangman-step-4",
+    "title": "Hangman Step 4",
+    "language": "Python",
+    "category": "Control Flow",
+    "difficulty": "Beginner",
+    "dateCreated": "2026-01-07T10:00:00Z",
+    "lastUpdated": "2026-01-07T10:00:00Z",
+    "tags": [
+      "lives",
+      "ascii-art",
+      "game",
+      "stages"
+    ],
+    "description": "Completes the Hangman mechanics by adding a lives counter and ASCII art stages that update with each wrong guess.",
+    "learningNotes": {
+      "whatILearned": "Decrementing a lives counter on wrong guesses and indexing a stages list to display matching ASCII art.",
+      "challenges": "Calculating the correct stage index from remaining lives.",
+      "nextSteps": "Refactor into functions and then into a class for full Hangman."
+    }
+  },
+  "files": [
+    {
+      "id": "file-001",
+      "fileName": "Day7 009.py",
+      "filePath": "content/python/Day7 009.py",
+      "description": "Hangman step 4: lives counter and ASCII stages.",
+      "dateAdded": "2026-01-07T10:00:00Z"
+    }
+  ]
+}

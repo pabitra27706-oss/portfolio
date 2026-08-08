@@ -1,0 +1,32 @@
+{
+  "topic": {
+    "id": "python-hangman-step-2",
+    "title": "Hangman Step 2",
+    "language": "Python",
+    "category": "Control Flow",
+    "difficulty": "Beginner",
+    "dateCreated": "2026-01-07T10:00:00Z",
+    "lastUpdated": "2026-01-07T10:00:00Z",
+    "tags": [
+      "lists",
+      "loops",
+      "display",
+      "enumerate"
+    ],
+    "description": "Adds a display list of underscores and reveals correctly guessed letters in their positions. Builds on step 1 with list manipulation.",
+    "learningNotes": {
+      "whatILearned": "Using enumerate() to loop with both index and value, updating a display list at specific positions.",
+      "challenges": "Correctly matching letter positions in the word to display list indices.",
+      "nextSteps": "Step 3: add a while loop for repeated guessing."
+    }
+  },
+  "files": [
+    {
+      "id": "file-001",
+      "fileName": "Day 7 practiceupdate.py",
+      "filePath": "content/python/Day 7 practiceupdate.py",
+      "description": "Hangman step 2: blank display with letter reveal.",
+      "dateAdded": "2026-01-07T10:00:00Z"
+    }
+  ]
+}

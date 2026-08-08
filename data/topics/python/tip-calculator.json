@@ -1,0 +1,32 @@
+{
+  "topic": {
+    "id": "python-tip-calculator",
+    "title": "Tip Calculator",
+    "language": "Python",
+    "category": "Basics & Syntax",
+    "difficulty": "Beginner",
+    "dateCreated": "2026-01-02T10:00:00Z",
+    "lastUpdated": "2026-01-02T10:00:00Z",
+    "tags": [
+      "input",
+      "arithmetic",
+      "rounding",
+      "float"
+    ],
+    "description": "Calculates how much each person should pay including a chosen tip percentage. Practices float arithmetic, rounding, and formatted output.",
+    "learningNotes": {
+      "whatILearned": "Converting input to float, dividing bills, and rounding to two decimal places using round().",
+      "challenges": "Handling floating-point precision and displaying clean output.",
+      "nextSteps": "Add custom rounding and support for unequal splits."
+    }
+  },
+  "files": [
+    {
+      "id": "file-001",
+      "fileName": "Tip calculator .py",
+      "filePath": "content/python/Tip calculator .py",
+      "description": "Bill and tip splitter among multiple people.",
+      "dateAdded": "2026-01-02T10:00:00Z"
+    }
+  ]
+}

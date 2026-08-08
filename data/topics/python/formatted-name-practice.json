@@ -1,0 +1,39 @@
+{
+  "topic": {
+    "id": "python-formatted-name",
+    "title": "Formatted Name Practice",
+    "language": "Python",
+    "category": "Functions & Modules",
+    "difficulty": "Beginner",
+    "dateCreated": "2026-01-08T10:00:00Z",
+    "lastUpdated": "2026-01-08T10:00:00Z",
+    "tags": [
+      "functions",
+      "strings",
+      "title-case",
+      "return"
+    ],
+    "description": "Takes a first and last name and returns them formatted in title case. A gentle introduction to defining and calling functions with return values.",
+    "learningNotes": {
+      "whatILearned": "Defining a function with parameters, using str.title() for formatting, and returning a value.",
+      "challenges": "Understanding the difference between printing inside a function and returning a value.",
+      "nextSteps": "Add optional middle name parameter and handle empty string input."
+    }
+  },
+  "files": [
+    {
+      "id": "file-001",
+      "fileName": "002_day_10_practice.py",
+      "filePath": "content/python/002_day_10_practice.py",
+      "description": "Formatted name function — version 1.",
+      "dateAdded": "2026-01-08T10:00:00Z"
+    },
+    {
+      "id": "file-002",
+      "fileName": "002_day_10_practice(1).py",
+      "filePath": "content/python/002_day_10_practice(1).py",
+      "description": "Formatted name function — version 2 with variation.",
+      "dateAdded": "2026-01-08T10:00:00Z"
+    }
+  ]
+}

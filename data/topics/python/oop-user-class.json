@@ -1,0 +1,33 @@
+{
+  "topic": {
+    "id": "python-oop-user-class",
+    "title": "OOP User Class",
+    "language": "Python",
+    "category": "Object-Oriented Programming",
+    "difficulty": "Intermediate",
+    "dateCreated": "2026-01-18T10:00:00Z",
+    "lastUpdated": "2026-01-18T10:00:00Z",
+    "tags": [
+      "class",
+      "methods",
+      "attributes",
+      "oop",
+      "init"
+    ],
+    "description": "Defines a User class with id, username, followers, and following attributes, plus a follow() method. A clean introduction to object-oriented programming.",
+    "learningNotes": {
+      "whatILearned": "Writing a class with __init__ to set initial state and defining instance methods that modify attributes. Understanding self as the instance reference.",
+      "challenges": "Remembering to use self for every attribute access inside methods.",
+      "nextSteps": "Add an unfollow method, a bio attribute, and experiment with multiple User instances interacting."
+    }
+  },
+  "files": [
+    {
+      "id": "file-001",
+      "fileName": "Day17_003.py",
+      "filePath": "content/python/Day17_003.py",
+      "description": "User class with follow() method.",
+      "dateAdded": "2026-01-18T10:00:00Z"
+    }
+  ]
+}

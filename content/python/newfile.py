@@ -1,0 +1,1 @@
+print("wellcome "+input(" Enter your name:"))

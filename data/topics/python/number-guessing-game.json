@@ -1,0 +1,40 @@
+{
+  "topic": {
+    "id": "python-number-guessing-game",
+    "title": "Number Guessing Game",
+    "language": "Python",
+    "category": "Control Flow",
+    "difficulty": "Intermediate",
+    "dateCreated": "2026-01-15T10:00:00Z",
+    "lastUpdated": "2026-01-15T10:00:00Z",
+    "tags": [
+      "random",
+      "loops",
+      "conditionals",
+      "functions",
+      "game"
+    ],
+    "description": "Two implementations of a number guessing game with limited attempts and difficulty selection. Covers while loops, conditionals, and modular function design.",
+    "learningNotes": {
+      "whatILearned": "Using while loops for game continuation, giving high/low hints, managing an attempts counter, and separating game logic into functions.",
+      "challenges": "Managing the attempts variable scope and resetting state between rounds.",
+      "nextSteps": "Add difficulty levels, a scoring system, and a replay loop."
+    }
+  },
+  "files": [
+    {
+      "id": "file-001",
+      "fileName": "Number_guessing_won.py",
+      "filePath": "content/python/Number_guessing_won.py",
+      "description": "Number guessing game with difficulty and win messages.",
+      "dateAdded": "2026-01-15T10:00:00Z"
+    },
+    {
+      "id": "file-002",
+      "fileName": "Number_guessing_deep.py",
+      "filePath": "content/python/Number_guessing_deep.py",
+      "description": "Alternative implementation with cleaner loop structure.",
+      "dateAdded": "2026-01-15T10:00:00Z"
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "topic": {
+    "id": "python-number-guessing-explained",
+    "title": "Number Guessing Game Explained",
+    "language": "Python",
+    "category": "Functions & Modules",
+    "difficulty": "Intermediate",
+    "dateCreated": "2026-01-14T10:00:00Z",
+    "lastUpdated": "2026-01-14T10:00:00Z",
+    "tags": [
+      "functions",
+      "scope",
+      "global",
+      "random",
+      "game"
+    ],
+    "description": "A heavily commented number guessing implementation that explains variable scope, function definitions, and global variables in detail.",
+    "learningNotes": {
+      "whatILearned": "How global and local scope interact, when to use the global keyword, and how returning values from functions avoids global state.",
+      "challenges": "Keeping track of which variables are accessible where.",
+      "nextSteps": "Refactor to remove global variables entirely using function parameters and returns."
+    }
+  },
+  "files": [
+    {
+      "id": "file-001",
+      "fileName": "explain.py",
+      "filePath": "content/python/explain.py",
+      "description": "Number guessing game with detailed scope comments.",
+      "dateAdded": "2026-01-14T10:00:00Z"
+    }
+  ]
+}

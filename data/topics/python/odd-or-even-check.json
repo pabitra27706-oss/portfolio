@@ -1,0 +1,32 @@
+{
+  "topic": {
+    "id": "python-odd-even",
+    "title": "Odd or Even Check",
+    "language": "Python",
+    "category": "Basics & Syntax",
+    "difficulty": "Beginner",
+    "dateCreated": "2026-01-02T10:00:00Z",
+    "lastUpdated": "2026-01-02T10:00:00Z",
+    "tags": [
+      "modulo",
+      "conditionals",
+      "input",
+      "operators"
+    ],
+    "description": "A program that checks whether a given number is odd or even using the modulo operator. A foundational exercise in conditionals and operators.",
+    "learningNotes": {
+      "whatILearned": "Using the % (modulo) operator and if-else to branch based on a condition.",
+      "challenges": "None — great first conditional exercise.",
+      "nextSteps": "Extend to check for prime numbers."
+    }
+  },
+  "files": [
+    {
+      "id": "file-001",
+      "fileName": "Oddeven check .py",
+      "filePath": "content/python/Oddeven check .py",
+      "description": "Odd/even checker using modulo.",
+      "dateAdded": "2026-01-02T10:00:00Z"
+    }
+  ]
+}

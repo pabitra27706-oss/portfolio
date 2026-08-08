@@ -1,0 +1,33 @@
+{
+  "topic": {
+    "id": "python-higher-lower-game",
+    "title": "Higher Lower Game",
+    "language": "Python",
+    "category": "Control Flow",
+    "difficulty": "Intermediate",
+    "dateCreated": "2026-01-16T10:00:00Z",
+    "lastUpdated": "2026-01-16T10:00:00Z",
+    "tags": [
+      "lists",
+      "dictionaries",
+      "loops",
+      "random",
+      "game"
+    ],
+    "description": "A game where the player guesses which celebrity has more social media followers. Uses lists of dictionaries, score tracking, and a continuous game loop.",
+    "learningNotes": {
+      "whatILearned": "Structuring data as a list of dictionaries, comparing values within dictionaries, and managing a score counter across game rounds.",
+      "challenges": "Handling duplicate follower counts and ensuring the same celebrity is not selected twice.",
+      "nextSteps": "Add a high-score tracker and fetch live data from an API."
+    }
+  },
+  "files": [
+    {
+      "id": "file-001",
+      "fileName": "Higher_lower_game.py",
+      "filePath": "content/python/Higher_lower_game.py",
+      "description": "Complete celebrity follower-count guessing game.",
+      "dateAdded": "2026-01-16T10:00:00Z"
+    }
+  ]
+}

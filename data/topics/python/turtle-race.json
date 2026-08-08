@@ -1,0 +1,33 @@
+{
+  "topic": {
+    "id": "python-turtle-race",
+    "title": "Turtle Race",
+    "language": "Python",
+    "category": "Control Flow",
+    "difficulty": "Intermediate",
+    "dateCreated": "2026-01-13T10:00:00Z",
+    "lastUpdated": "2026-01-13T10:00:00Z",
+    "tags": [
+      "turtle",
+      "random",
+      "event-driven",
+      "game",
+      "lists"
+    ],
+    "description": "A turtle racing game where the user bets on a color and multiple turtles race across the screen with random step sizes. Introduces multiple turtle objects.",
+    "learningNotes": {
+      "whatILearned": "Creating and positioning multiple Turtle objects, using screen.textinput() for user input, and detecting a winner by x-position.",
+      "challenges": "Setting up initial positions for each turtle and determining which reached the finish line first.",
+      "nextSteps": "Add lap counting, obstacles, and an animated scoreboard."
+    }
+  },
+  "files": [
+    {
+      "id": "file-001",
+      "fileName": "Turtle_race.py",
+      "filePath": "content/python/Turtle_race.py",
+      "description": "Color betting turtle race with random movement.",
+      "dateAdded": "2026-01-13T10:00:00Z"
+    }
+  ]
+}

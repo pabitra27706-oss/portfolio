@@ -1,0 +1,32 @@
+{
+  "topic": {
+    "id": "python-hangman-step-1",
+    "title": "Hangman Step 1",
+    "language": "Python",
+    "category": "Control Flow",
+    "difficulty": "Beginner",
+    "dateCreated": "2026-01-07T10:00:00Z",
+    "lastUpdated": "2026-01-07T10:00:00Z",
+    "tags": [
+      "random",
+      "strings",
+      "lists",
+      "in-operator"
+    ],
+    "description": "First step of building Hangman: randomly choose a word and check if a single guessed letter is in the word. Introduces the in operator with strings.",
+    "learningNotes": {
+      "whatILearned": "Using random.choice on a word list and the in operator to test membership.",
+      "challenges": "None — this step focuses on a single guess check.",
+      "nextSteps": "Step 2: show blanks and reveal correct guesses."
+    }
+  },
+  "files": [
+    {
+      "id": "file-001",
+      "fileName": "Day7 practice.py",
+      "filePath": "content/python/Day7 practice.py",
+      "description": "Hangman step 1: single letter guess check.",
+      "dateAdded": "2026-01-07T10:00:00Z"
+    }
+  ]
+}

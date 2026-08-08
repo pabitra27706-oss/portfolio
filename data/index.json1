@@ -1,0 +1,178 @@
+{
+  "metadata": {
+    "siteName": "Learning Archive",
+    "lastUpdated": "2026-08-08T12:10:12Z",
+    "firstEntryDate": "2026-01-08",
+    "totalTopics": 11,
+    "totalFiles": 11,
+    "languages": [
+      "C",
+      "Python",
+      "JavaScript"
+    ]
+  },
+  "topics": [
+    {
+      "id": "c-for-loop-example",
+      "title": "For Loop Example",
+      "language": "C",
+      "dateCreated": "2026-08-08",
+      "lastUpdated": "2026-08-08",
+      "fileCount": 1,
+      "tags": [
+        "for-loop",
+        "loops",
+        "iteration"
+      ],
+      "description": "Iteration using for loops. Understanding loop initialization, condition, and increment/decrement.",
+      "topicFile": "data/topics/c/for-loop-example.json"
+    },
+    {
+      "id": "c-nasted-if-else-statement-in-c",
+      "title": "Nasted If-Else Statement in C",
+      "language": "C",
+      "dateCreated": "2026-08-07",
+      "lastUpdated": "2026-08-07",
+      "fileCount": 1,
+      "tags": [
+        "if-else",
+        "control-flow",
+        "printf",
+        "output",
+        "conditional"
+      ],
+      "description": "Conditional execution using if-else statements. Decision making and branching logic in C programs.",
+      "topicFile": "data/topics/c/nasted-if-else-for-max-no-find.json"
+    },
+    {
+      "id": "c-for-loop-in-c",
+      "title": "For Loop in C",
+      "language": "C",
+      "dateCreated": "2026-08-07",
+      "lastUpdated": "2026-08-07",
+      "fileCount": 1,
+      "tags": [
+        "for-loop",
+        "loops",
+        "iteration",
+        "input",
+        "scanf"
+      ],
+      "description": "Iteration using for loops. Understanding loop initialization, condition, and increment/decrement.",
+      "topicFile": "data/topics/c/for-loop.json"
+    },
+    {
+      "id": "c-if-else-statement-in-c",
+      "title": "If-Else Statement in C",
+      "language": "C",
+      "dateCreated": "2026-08-06",
+      "lastUpdated": "2026-08-06",
+      "fileCount": 1,
+      "tags": [
+        "if-else",
+        "conditional",
+        "printf"
+      ],
+      "description": "Conditional execution using if-else statements. Decision making and branching logic in C programs.",
+      "topicFile": "data/topics/c/if-else-statement.json"
+    },
+    {
+      "id": "c-grade-calculator",
+      "title": "grade-calculator",
+      "language": "C",
+      "dateCreated": "2026-08-06",
+      "lastUpdated": "2026-08-06",
+      "fileCount": 1,
+      "tags": [
+        "if",
+        "else",
+        "else-if"
+      ],
+      "description": "To understand how if else work.",
+      "topicFile": "data/topics/c/grade-calculator.json"
+    },
+    {
+      "id": "c-leap-year-finder",
+      "title": "leap-year finder",
+      "language": "C",
+      "dateCreated": "2026-08-06",
+      "lastUpdated": "2026-08-06",
+      "fileCount": 1,
+      "tags": [
+        "if",
+        "else",
+        "else-if"
+      ],
+      "description": "Any can find if a year is leap-year or not.",
+      "topicFile": "data/topics/c/leap-year-finder.json"
+    },
+    {
+      "id": "c-highest-number-among-3-numbers",
+      "title": "highest-number-among-3-numbers",
+      "language": "C",
+      "dateCreated": "2026-08-06",
+      "lastUpdated": "2026-08-06",
+      "fileCount": 1,
+      "tags": [
+        "if",
+        "else"
+      ],
+      "description": "To find the highest number among 3 numbers.",
+      "topicFile": "data/topics/c/highest-number-among-3-numbers.json"
+    },
+    {
+      "id": "c-divider",
+      "title": "divider",
+      "language": "C",
+      "dateCreated": "2026-08-06",
+      "lastUpdated": "2026-08-06",
+      "fileCount": 1,
+      "tags": [
+        "arithmetic-operation"
+      ],
+      "description": "Didier of 2 integer numbers.",
+      "topicFile": "data/topics/c/divider.json"
+    },
+    {
+      "id": "c-simple-subtraction",
+      "title": "simple-subtraction",
+      "language": "C",
+      "dateCreated": "2026-08-06",
+      "lastUpdated": "2026-08-06",
+      "fileCount": 1,
+      "tags": [
+        "arithmetic-operation"
+      ],
+      "description": "It simply subtract 2 digits.",
+      "topicFile": "data/topics/c/simple-subtraction.json"
+    },
+    {
+      "id": "c-simple-multiplication",
+      "title": "simple-multiplication",
+      "language": "C",
+      "dateCreated": "2026-08-05",
+      "lastUpdated": "2026-08-05",
+      "fileCount": 1,
+      "tags": [
+        "multiplication",
+        "for-loop"
+      ],
+      "description": "How to multiply numbers",
+      "topicFile": "data/topics/c/simple-multiplication.json"
+    },
+    {
+      "id": "c-count-bassed-sum-c",
+      "title": "count_bassed_sum.c",
+      "language": "C",
+      "dateCreated": "2026-08-05",
+      "lastUpdated": "2026-08-05",
+      "fileCount": 1,
+      "tags": [
+        "for-loops",
+        "arithmetic-expressions"
+      ],
+      "description": "It a simple project to get some of numbers with a finite known numbers.",
+      "topicFile": "data/topics/c/count_bassed_sum.json"
+    }
+  ]
+}

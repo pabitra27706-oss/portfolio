@@ -1,0 +1,32 @@
+{
+  "topic": {
+    "id": "python-hello-world",
+    "title": "Hello World",
+    "language": "Python",
+    "category": "Basics & Syntax",
+    "difficulty": "Beginner",
+    "dateCreated": "2026-01-01T10:00:00Z",
+    "lastUpdated": "2026-01-01T10:00:00Z",
+    "tags": [
+      "print",
+      "input",
+      "basics",
+      "variables"
+    ],
+    "description": "The very first Python program: printing a greeting and taking user input. Introduces the print() and input() functions with basic string usage.",
+    "learningNotes": {
+      "whatILearned": "Using print() to display output and input() to receive user data. Understanding strings as sequences of characters.",
+      "challenges": "None — this is the starting point.",
+      "nextSteps": "Learn about variables and data types."
+    }
+  },
+  "files": [
+    {
+      "id": "file-001",
+      "fileName": "newfile.py",
+      "filePath": "content/python/newfile.py",
+      "description": "Greeting program using print and input.",
+      "dateAdded": "2026-01-01T10:00:00Z"
+    }
+  ]
+}

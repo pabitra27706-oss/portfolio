@@ -1,0 +1,47 @@
+{
+  "topic": {
+    "id": "python-variable-scope",
+    "title": "Variable Scope",
+    "language": "Python",
+    "category": "Functions & Modules",
+    "difficulty": "Intermediate",
+    "dateCreated": "2026-01-15T10:00:00Z",
+    "lastUpdated": "2026-01-15T10:00:00Z",
+    "tags": [
+      "scope",
+      "global",
+      "local",
+      "functions",
+      "namespaces"
+    ],
+    "description": "Three files demonstrating Python scope rules: global vs local, block scope absence, and modifying globals. Covers the LEGB rule in practice.",
+    "learningNotes": {
+      "whatILearned": "Understanding the LEGB (Local, Enclosing, Global, Built-in) rule, why Python has no block scope unlike C/Java, and the safest ways to modify global state.",
+      "challenges": "Accidentally shadowing global variables with local ones and confusion with nested function scopes.",
+      "nextSteps": "Study the nonlocal keyword and closures for enclosing scope modification."
+    }
+  },
+  "files": [
+    {
+      "id": "file-001",
+      "fileName": "Scope.py",
+      "filePath": "content/python/Scope.py",
+      "description": "Global, enclosing, and local scope illustrations.",
+      "dateAdded": "2026-01-15T10:00:00Z"
+    },
+    {
+      "id": "file-002",
+      "fileName": "Block_scope.py",
+      "filePath": "content/python/Block_scope.py",
+      "description": "Shows Python has no block scope — if/for variables leak out.",
+      "dateAdded": "2026-01-15T10:00:00Z"
+    },
+    {
+      "id": "file-003",
+      "fileName": "Global_modify.py",
+      "filePath": "content/python/Global_modify.py",
+      "description": "Modifying global state safely through function return values.",
+      "dateAdded": "2026-01-15T10:00:00Z"
+    }
+  ]
+}

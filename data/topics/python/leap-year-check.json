@@ -1,0 +1,32 @@
+{
+  "topic": {
+    "id": "python-leap-year-check",
+    "title": "Leap Year Check",
+    "language": "Python",
+    "category": "Control Flow",
+    "difficulty": "Beginner",
+    "dateCreated": "2026-01-04T10:00:00Z",
+    "lastUpdated": "2026-01-04T10:00:00Z",
+    "tags": [
+      "conditionals",
+      "modulo",
+      "logic",
+      "boolean"
+    ],
+    "description": "Determines whether a year is a leap year using divisibility rules: divisible by 4, not by 100, unless also by 400. Teaches compound boolean expressions.",
+    "learningNotes": {
+      "whatILearned": "Combining and/or logical operators in a single condition and applying the real-world leap year rule.",
+      "challenges": "Getting the order of conditions correct — 400 must be checked before 100.",
+      "nextSteps": "Validate non-integer input and build a date library."
+    }
+  },
+  "files": [
+    {
+      "id": "file-001",
+      "fileName": "Leap year check .py",
+      "filePath": "content/python/Leap year check .py",
+      "description": "Leap year checker with compound boolean logic.",
+      "dateAdded": "2026-01-04T10:00:00Z"
+    }
+  ]
+}

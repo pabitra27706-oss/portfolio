@@ -1,0 +1,31 @@
+{
+  "topic": {
+    "id": "python-head-tail",
+    "title": "Head or Tail Coin Flip",
+    "language": "Python",
+    "category": "Basics & Syntax",
+    "difficulty": "Beginner",
+    "dateCreated": "2026-01-02T10:00:00Z",
+    "lastUpdated": "2026-01-02T10:00:00Z",
+    "tags": [
+      "random",
+      "conditionals",
+      "import"
+    ],
+    "description": "Simulates a coin flip using random.randint and prints Head or Tail. Introduces the random module and simple conditional logic.",
+    "learningNotes": {
+      "whatILearned": "Importing the random module and using randint(0,1) with if-else for a binary outcome.",
+      "challenges": "Understanding why we import modules.",
+      "nextSteps": "Add multiple flips and track streaks."
+    }
+  },
+  "files": [
+    {
+      "id": "file-001",
+      "fileName": "Head or Tail.py",
+      "filePath": "content/python/Head or Tail.py",
+      "description": "Coin flip simulation using random.",
+      "dateAdded": "2026-01-02T10:00:00Z"
+    }
+  ]
+}

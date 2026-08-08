@@ -1,0 +1,33 @@
+{
+  "topic": {
+    "id": "python-sum-even-numbers",
+    "title": "Sum of Even Numbers",
+    "language": "Python",
+    "category": "Control Flow",
+    "difficulty": "Beginner",
+    "dateCreated": "2026-01-05T10:00:00Z",
+    "lastUpdated": "2026-01-05T10:00:00Z",
+    "tags": [
+      "loops",
+      "even",
+      "sum",
+      "range",
+      "modulo"
+    ],
+    "description": "Calculates the sum of all even numbers from 1 to 100 using a for loop and modulo filtering. Combines loops with conditional logic.",
+    "learningNotes": {
+      "whatILearned": "Using range() with a for loop and the modulo operator to filter only even numbers into a running sum.",
+      "challenges": "Choosing between range(0,101,2) and a modulo check inside the loop.",
+      "nextSteps": "Generalize to sum multiples of any number in any range."
+    }
+  },
+  "files": [
+    {
+      "id": "file-001",
+      "fileName": "Adding even.py",
+      "filePath": "content/python/Adding even.py",
+      "description": "Sums even numbers from 1 to 100.",
+      "dateAdded": "2026-01-05T10:00:00Z"
+    }
+  ]
+}

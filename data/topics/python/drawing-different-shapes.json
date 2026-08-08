@@ -1,0 +1,32 @@
+{
+  "topic": {
+    "id": "python-drawing-shapes",
+    "title": "Drawing Different Shapes",
+    "language": "Python",
+    "category": "Control Flow",
+    "difficulty": "Intermediate",
+    "dateCreated": "2026-01-12T10:00:00Z",
+    "lastUpdated": "2026-01-12T10:00:00Z",
+    "tags": [
+      "turtle",
+      "loops",
+      "geometry",
+      "random-color"
+    ],
+    "description": "Draws polygons from triangle to decagon, each with a random color. Applies the exterior angle formula (360 / sides) and nested loops.",
+    "learningNotes": {
+      "whatILearned": "Calculating exterior angles for regular polygons and using a nested loop to draw each shape in a different random color.",
+      "challenges": "Getting the angle formula right and understanding why 360 / n works for any regular polygon.",
+      "nextSteps": "Draw stars using different angle calculations."
+    }
+  },
+  "files": [
+    {
+      "id": "file-001",
+      "fileName": "Drawing_different_shape.py",
+      "filePath": "content/python/Drawing_different_shape.py",
+      "description": "Draws triangle to decagon with random colors.",
+      "dateAdded": "2026-01-12T10:00:00Z"
+    }
+  ]
+}

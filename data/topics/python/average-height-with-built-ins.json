@@ -1,0 +1,33 @@
+{
+  "topic": {
+    "id": "python-average-height-builtin",
+    "title": "Average Height with Built-ins",
+    "language": "Python",
+    "category": "Basics & Syntax",
+    "difficulty": "Beginner",
+    "dateCreated": "2026-01-05T10:00:00Z",
+    "lastUpdated": "2026-01-05T10:00:00Z",
+    "tags": [
+      "lists",
+      "sum",
+      "len",
+      "average",
+      "built-ins"
+    ],
+    "description": "Calculates the average height of a list of students using Python built-in functions sum() and len(). Demonstrates the power of built-in functions for clean code.",
+    "learningNotes": {
+      "whatILearned": "Using sum() and len() together to compute an average in a single readable expression.",
+      "challenges": "None — demonstrates the simplest approach.",
+      "nextSteps": "Compare with a manual loop approach for deeper understanding."
+    }
+  },
+  "files": [
+    {
+      "id": "file-001",
+      "fileName": "Avg hight(sum+len).py",
+      "filePath": "content/python/Avg hight(sum+len).py",
+      "description": "Average height using sum() and len().",
+      "dateAdded": "2026-01-05T10:00:00Z"
+    }
+  ]
+}

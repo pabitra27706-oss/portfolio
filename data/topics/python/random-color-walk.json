@@ -1,0 +1,32 @@
+{
+  "topic": {
+    "id": "python-random-color-walk",
+    "title": "Random Color Walk",
+    "language": "Python",
+    "category": "Control Flow",
+    "difficulty": "Intermediate",
+    "dateCreated": "2026-01-12T10:00:00Z",
+    "lastUpdated": "2026-01-12T10:00:00Z",
+    "tags": [
+      "turtle",
+      "random",
+      "loops",
+      "rgb"
+    ],
+    "description": "Extends the random walk by generating a random RGB color for each step. Introduces colormode(255) and dynamic color generation.",
+    "learningNotes": {
+      "whatILearned": "Setting turtle.colormode(255) to use RGB values and generating three random integers (0–255) for each new color.",
+      "challenges": "Remembering to set colormode before using RGB tuples.",
+      "nextSteps": "Combine with varying step sizes for more organic patterns."
+    }
+  },
+  "files": [
+    {
+      "id": "file-001",
+      "fileName": "Random_color.py",
+      "filePath": "content/python/Random_color.py",
+      "description": "Random walk with dynamically generated RGB colors.",
+      "dateAdded": "2026-01-12T10:00:00Z"
+    }
+  ]
+}

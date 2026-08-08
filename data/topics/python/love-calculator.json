@@ -1,0 +1,32 @@
+{
+  "topic": {
+    "id": "python-love-calculator",
+    "title": "Love Calculator",
+    "language": "Python",
+    "category": "Basics & Syntax",
+    "difficulty": "Beginner",
+    "dateCreated": "2026-01-03T10:00:00Z",
+    "lastUpdated": "2026-01-03T10:00:00Z",
+    "tags": [
+      "strings",
+      "count",
+      "conditionals",
+      "lower"
+    ],
+    "description": "A fun program that counts letters in \"true\" and \"love\" from two names and produces a love score. Practices string methods and conditionals.",
+    "learningNotes": {
+      "whatILearned": "Using str.lower() for case-insensitive matching and str.count() to tally characters.",
+      "challenges": "Correctly concatenating the two names before counting.",
+      "nextSteps": "Improve scoring algorithm and add more words."
+    }
+  },
+  "files": [
+    {
+      "id": "file-001",
+      "fileName": "Love calculator.py",
+      "filePath": "content/python/Love calculator.py",
+      "description": "Calculates a love score from two names.",
+      "dateAdded": "2026-01-03T10:00:00Z"
+    }
+  ]
+}

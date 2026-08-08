@@ -1,0 +1,32 @@
+{
+  "topic": {
+    "id": "python-turtle-events",
+    "title": "Turtle Keyboard Events",
+    "language": "Python",
+    "category": "Control Flow",
+    "difficulty": "Intermediate",
+    "dateCreated": "2026-01-13T10:00:00Z",
+    "lastUpdated": "2026-01-13T10:00:00Z",
+    "tags": [
+      "turtle",
+      "keyboard-events",
+      "event-driven",
+      "listen"
+    ],
+    "description": "Demonstrates setting up keyboard event listeners with screen.listen() and screen.onkey(). A foundation for building interactive turtle applications.",
+    "learningNotes": {
+      "whatILearned": "Using screen.listen() to activate key listening and screen.onkey() to bind a function to a specific key press.",
+      "challenges": "Understanding that functions must be passed without parentheses as callbacks.",
+      "nextSteps": "Bind multiple keys for full directional control."
+    }
+  },
+  "files": [
+    {
+      "id": "file-001",
+      "fileName": "Day_19_start.py",
+      "filePath": "content/python/Day_19_start.py",
+      "description": "Turtle moves forward when space key is pressed.",
+      "dateAdded": "2026-01-13T10:00:00Z"
+    }
+  ]
+}

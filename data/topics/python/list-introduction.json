@@ -1,0 +1,32 @@
+{
+  "topic": {
+    "id": "python-list-introduction",
+    "title": "List Introduction",
+    "language": "Python",
+    "category": "Data Structures",
+    "difficulty": "Beginner",
+    "dateCreated": "2026-01-05T10:00:00Z",
+    "lastUpdated": "2026-01-05T10:00:00Z",
+    "tags": [
+      "lists",
+      "indexing",
+      "negative-index",
+      "access"
+    ],
+    "description": "Demonstrates creating a list of Indian states and accessing elements using both positive and negative indices. A clean introduction to Python lists.",
+    "learningNotes": {
+      "whatILearned": "Creating lists, accessing by positive index, and using negative indices to access from the end.",
+      "challenges": "None — a gentle introduction to list indexing.",
+      "nextSteps": "Learn list methods: append(), extend(), remove(), pop()."
+    }
+  },
+  "files": [
+    {
+      "id": "file-001",
+      "fileName": "About list.py",
+      "filePath": "content/python/About list.py",
+      "description": "List of states with positive and negative index access.",
+      "dateAdded": "2026-01-05T10:00:00Z"
+    }
+  ]
+}

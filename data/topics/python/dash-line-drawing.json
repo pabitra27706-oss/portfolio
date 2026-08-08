@@ -1,0 +1,32 @@
+{
+  "topic": {
+    "id": "python-dash-line",
+    "title": "Dash Line Drawing",
+    "language": "Python",
+    "category": "Control Flow",
+    "difficulty": "Intermediate",
+    "dateCreated": "2026-01-12T10:00:00Z",
+    "lastUpdated": "2026-01-12T10:00:00Z",
+    "tags": [
+      "turtle",
+      "loops",
+      "penup",
+      "pendown"
+    ],
+    "description": "Draws a dashed line by alternating penup() and pendown() calls inside a loop. Teaches pen control for non-continuous drawing.",
+    "learningNotes": {
+      "whatILearned": "Using penup() to lift the pen and pendown() to resume drawing, creating gaps in the path.",
+      "challenges": "Timing the pen state changes to produce evenly spaced dashes.",
+      "nextSteps": "Draw dashed outlines of shapes."
+    }
+  },
+  "files": [
+    {
+      "id": "file-001",
+      "fileName": "Dash_line.py",
+      "filePath": "content/python/Dash_line.py",
+      "description": "Draws a dashed line with penup/pendown alternation.",
+      "dateAdded": "2026-01-12T10:00:00Z"
+    }
+  ]
+}

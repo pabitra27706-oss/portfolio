@@ -1,0 +1,32 @@
+{
+  "topic": {
+    "id": "python-random-walk",
+    "title": "Random Walk",
+    "language": "Python",
+    "category": "Control Flow",
+    "difficulty": "Intermediate",
+    "dateCreated": "2026-01-12T10:00:00Z",
+    "lastUpdated": "2026-01-12T10:00:00Z",
+    "tags": [
+      "turtle",
+      "random",
+      "loops",
+      "choice"
+    ],
+    "description": "A turtle that moves in random directions (up, down, left, right) producing an unpredictable colored path. Introduces algorithmic randomness in graphics.",
+    "learningNotes": {
+      "whatILearned": "Using random.choice on a list of angles to pick direction and applying turtle.setheading() for absolute direction control.",
+      "challenges": "Understanding heading angles: 0=right, 90=up, 180=left, 270=down.",
+      "nextSteps": "Add variable step lengths and track how far from origin."
+    }
+  },
+  "files": [
+    {
+      "id": "file-001",
+      "fileName": "Random_walk.py",
+      "filePath": "content/python/Random_walk.py",
+      "description": "Random walk turtle with predefined color list.",
+      "dateAdded": "2026-01-12T10:00:00Z"
+    }
+  ]
+}

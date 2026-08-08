@@ -1,0 +1,40 @@
+{
+  "topic": {
+    "id": "python-painting-project",
+    "title": "Painting Project",
+    "language": "Python",
+    "category": "Data Science",
+    "difficulty": "Intermediate",
+    "dateCreated": "2026-01-17T10:00:00Z",
+    "lastUpdated": "2026-01-17T10:00:00Z",
+    "tags": [
+      "turtle",
+      "colorgram",
+      "lists",
+      "graphics",
+      "rgb"
+    ],
+    "description": "Extracts a color palette from an image using the colorgram library and recreates it as a dot painting with turtle. Combines external libraries with turtle graphics.",
+    "learningNotes": {
+      "whatILearned": "Installing and using the colorgram library to extract RGB color tuples from images and positioning turtles on a grid to create a dot painting.",
+      "challenges": "Getting the grid positioning calculation right and installing colorgram in the project environment.",
+      "nextSteps": "Try different dot sizes, spacing, or source images for varied visual effects."
+    }
+  },
+  "files": [
+    {
+      "id": "file-001",
+      "fileName": "Painting_project.py",
+      "filePath": "content/python/Painting_project.py",
+      "description": "Dot painting with colors extracted from an image.",
+      "dateAdded": "2026-01-17T10:00:00Z"
+    },
+    {
+      "id": "file-002",
+      "fileName": "main.py",
+      "filePath": "content/python/main.py",
+      "description": "Alternative painting project entry point.",
+      "dateAdded": "2026-01-17T10:00:00Z"
+    }
+  ]
+}

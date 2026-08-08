@@ -1,0 +1,33 @@
+{
+  "topic": {
+    "id": "python-spirograph",
+    "title": "Spirograph",
+    "language": "Python",
+    "category": "Control Flow",
+    "difficulty": "Intermediate",
+    "dateCreated": "2026-01-14T10:00:00Z",
+    "lastUpdated": "2026-01-14T10:00:00Z",
+    "tags": [
+      "turtle",
+      "random",
+      "geometry",
+      "loops",
+      "circles"
+    ],
+    "description": "Creates a colorful spirograph pattern by drawing circles with a small heading change each iteration. Combines loops, geometry, and random color generation.",
+    "learningNotes": {
+      "whatILearned": "Drawing circles with turtle.circle() and rotating the heading by a small angle each iteration to create a spirograph effect.",
+      "challenges": "Finding the right balance between angle increment and number of iterations.",
+      "nextSteps": "Experiment with different radii, speeds, and angle increments."
+    }
+  },
+  "files": [
+    {
+      "id": "file-001",
+      "fileName": "spirograh.py",
+      "filePath": "content/python/spirograh.py",
+      "description": "Colorful spirograph pattern with random RGB colors.",
+      "dateAdded": "2026-01-14T10:00:00Z"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "topic": {
+    "id": "python-bmi-calculator",
+    "title": "BMI Calculator",
+    "language": "Python",
+    "category": "Basics & Syntax",
+    "difficulty": "Beginner",
+    "dateCreated": "2026-01-03T10:00:00Z",
+    "lastUpdated": "2026-01-03T10:00:00Z",
+    "tags": [
+      "input",
+      "arithmetic",
+      "conditionals",
+      "health"
+    ],
+    "description": "Calculates Body Mass Index from height and weight and categorizes the result as underweight, normal, overweight, or obese. Combines arithmetic and multi-branch conditionals.",
+    "learningNotes": {
+      "whatILearned": "Performing BMI formula calculations, using if-elif-else chains for ranges, and rounding results.",
+      "challenges": "Getting the condition ranges correct and handling zero-height edge cases.",
+      "nextSteps": "Add GUI or export results to a file."
+    }
+  },
+  "files": [
+    {
+      "id": "file-001",
+      "fileName": "Bmi calculator.py",
+      "filePath": "content/python/Bmi calculator.py",
+      "description": "Basic BMI calculation without category labels.",
+      "dateAdded": "2026-01-03T10:00:00Z"
+    },
+    {
+      "id": "file-002",
+      "fileName": "Bmi update calculater.py",
+      "filePath": "content/python/Bmi update calculater.py",
+      "description": "BMI calculator with category messages.",
+      "dateAdded": "2026-01-03T10:00:00Z"
+    },
+    {
+      "id": "file-003",
+      "fileName": "Bmi calculator update .py",
+      "filePath": "content/python/Bmi calculator update .py",
+      "description": "Refined BMI calculator with improved output.",
+      "dateAdded": "2026-01-03T10:00:00Z"
+    }
+  ]
+}

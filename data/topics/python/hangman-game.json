@@ -1,0 +1,33 @@
+{
+  "topic": {
+    "id": "python-hangman",
+    "title": "Hangman Game",
+    "language": "Python",
+    "category": "Control Flow",
+    "difficulty": "Beginner",
+    "dateCreated": "2026-01-08T10:00:00Z",
+    "lastUpdated": "2026-01-08T10:00:00Z",
+    "tags": [
+      "strings",
+      "lists",
+      "random",
+      "game",
+      "ascii-art"
+    ],
+    "description": "The complete polished Hangman game with logo, word list, lives, and ASCII art stages. Combines all previous steps into a fully playable game.",
+    "learningNotes": {
+      "whatILearned": "How to assemble multiple concepts — random selection, loops, lists, and conditionals — into a complete working game.",
+      "challenges": "Handling repeated guesses and keeping the display state consistent across turns.",
+      "nextSteps": "Add a GUI using tkinter or expand the word list from an external file."
+    }
+  },
+  "files": [
+    {
+      "id": "file-001",
+      "fileName": "Hangman.py",
+      "filePath": "content/python/Hangman.py",
+      "description": "Complete Hangman game with logo, stages, and word list.",
+      "dateAdded": "2026-01-08T10:00:00Z"
+    }
+  ]
+}

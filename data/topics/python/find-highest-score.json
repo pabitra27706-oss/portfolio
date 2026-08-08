@@ -1,0 +1,32 @@
+{
+  "topic": {
+    "id": "python-high-score",
+    "title": "Find Highest Score",
+    "language": "Python",
+    "category": "Control Flow",
+    "difficulty": "Beginner",
+    "dateCreated": "2026-01-06T10:00:00Z",
+    "lastUpdated": "2026-01-06T10:00:00Z",
+    "tags": [
+      "lists",
+      "loops",
+      "comparison",
+      "max"
+    ],
+    "description": "Finds the highest score in a list of student scores without using the built-in max() function. Builds algorithmic thinking from scratch.",
+    "learningNotes": {
+      "whatILearned": "Iterating through a list and updating a tracking variable when a larger value is found.",
+      "challenges": "Deciding the correct initial value for high_score (first element vs 0).",
+      "nextSteps": "Also find minimum and average. Then compare with built-in max()."
+    }
+  },
+  "files": [
+    {
+      "id": "file-001",
+      "fileName": "high score.py",
+      "filePath": "content/python/high score.py",
+      "description": "Finds highest score from list without max().",
+      "dateAdded": "2026-01-06T10:00:00Z"
+    }
+  ]
+}

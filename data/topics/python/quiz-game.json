@@ -1,0 +1,54 @@
+{
+  "topic": {
+    "id": "python-quiz-game",
+    "title": "Quiz Game",
+    "language": "Python",
+    "category": "Object-Oriented Programming",
+    "difficulty": "Intermediate",
+    "dateCreated": "2026-01-19T10:00:00Z",
+    "lastUpdated": "2026-01-19T10:00:00Z",
+    "tags": [
+      "classes",
+      "oop",
+      "quiz",
+      "multiple-files",
+      "methods"
+    ],
+    "description": "A True/False quiz game built with OOP across four files: Question model, QuizBrain controller, question data, and main entry point. Demonstrates real multi-file Python project structure.",
+    "learningNotes": {
+      "whatILearned": "Organising code across multiple files, using classes to manage application state, and having objects reference each other (QuizBrain holds a list of Question objects).",
+      "challenges": "Keeping import paths correct across files and ensuring QuizBrain properly iterates and scores the questions.",
+      "nextSteps": "Add more categories, a timer per question, and a graphical interface with tkinter."
+    }
+  },
+  "files": [
+    {
+      "id": "file-001",
+      "fileName": "main(1).py",
+      "filePath": "content/python/main(1).py",
+      "description": "Entry point: creates Question list and QuizBrain, runs quiz.",
+      "dateAdded": "2026-01-19T10:00:00Z"
+    },
+    {
+      "id": "file-002",
+      "fileName": "quiz_brain.py",
+      "filePath": "content/python/quiz_brain.py",
+      "description": "QuizBrain class managing question flow and score tracking.",
+      "dateAdded": "2026-01-19T10:00:00Z"
+    },
+    {
+      "id": "file-003",
+      "fileName": "question_model.py",
+      "filePath": "content/python/question_model.py",
+      "description": "Question class with text and answer attributes.",
+      "dateAdded": "2026-01-19T10:00:00Z"
+    },
+    {
+      "id": "file-004",
+      "fileName": "data.py",
+      "filePath": "content/python/data.py",
+      "description": "Question dataset as a list of dictionaries.",
+      "dateAdded": "2026-01-19T10:00:00Z"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "topic": {
+    "id": "python-pizza-order",
+    "title": "Pizza Order Calculator",
+    "language": "Python",
+    "category": "Control Flow",
+    "difficulty": "Beginner",
+    "dateCreated": "2026-01-03T10:00:00Z",
+    "lastUpdated": "2026-01-03T10:00:00Z",
+    "tags": [
+      "conditionals",
+      "input",
+      "arithmetic",
+      "if-elif"
+    ],
+    "description": "Calculates the total price of a pizza order based on size, pepperoni, and extra cheese selections. Reinforces if-elif-else logic and cumulative addition.",
+    "learningNotes": {
+      "whatILearned": "Using elif for multiple choices and accumulating a running total.",
+      "challenges": "Organizing conditions to avoid redundant code paths.",
+      "nextSteps": "Add more toppings, combo deals, and discount logic."
+    }
+  },
+  "files": [
+    {
+      "id": "file-001",
+      "fileName": "Pizza order.py",
+      "filePath": "content/python/Pizza order.py",
+      "description": "Pizza bill calculator with size and topping options.",
+      "dateAdded": "2026-01-03T10:00:00Z"
+    }
+  ]
+}

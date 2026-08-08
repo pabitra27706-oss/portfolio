@@ -1,0 +1,32 @@
+{
+  "topic": {
+    "id": "python-data-types",
+    "title": "Data Types Practice",
+    "language": "Python",
+    "category": "Basics & Syntax",
+    "difficulty": "Beginner",
+    "dateCreated": "2026-01-01T10:00:00Z",
+    "lastUpdated": "2026-01-01T10:00:00Z",
+    "tags": [
+      "strings",
+      "indexing",
+      "type-conversion",
+      "integers"
+    ],
+    "description": "An introduction to Python data types: strings, integers, and type conversion. Demonstrates accessing characters by index and converting between types.",
+    "learningNotes": {
+      "whatILearned": "Accessing individual characters in a string using index notation and converting strings to integers with int().",
+      "challenges": "Understanding zero-based indexing for the first time.",
+      "nextSteps": "Explore floats, booleans, and type checking."
+    }
+  },
+  "files": [
+    {
+      "id": "file-001",
+      "fileName": "Datatype .py",
+      "filePath": "content/python/Datatype .py",
+      "description": "Sum of digits using string indexing and type conversion.",
+      "dateAdded": "2026-01-01T10:00:00Z"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "topic": {
+    "id": "python-etch-a-sketch",
+    "title": "Etch A Sketch App",
+    "language": "Python",
+    "category": "Control Flow",
+    "difficulty": "Intermediate",
+    "dateCreated": "2026-01-13T10:00:00Z",
+    "lastUpdated": "2026-01-13T10:00:00Z",
+    "tags": [
+      "turtle",
+      "keyboard-events",
+      "drawing",
+      "interactive"
+    ],
+    "description": "A keyboard-controlled drawing app using W/A/S/D keys to move the turtle and C to clear the screen. A complete interactive turtle application.",
+    "learningNotes": {
+      "whatILearned": "Binding multiple keys to different turtle actions and using screen.clearscreen() to reset the drawing.",
+      "challenges": "Ensuring key bindings do not interfere with each other and that the screen remains responsive.",
+      "nextSteps": "Add pen color selection with number keys and an undo feature."
+    }
+  },
+  "files": [
+    {
+      "id": "file-001",
+      "fileName": "Etch_A_Sketch_app.py",
+      "filePath": "content/python/Etch_A_Sketch_app.py",
+      "description": "WASD-controlled turtle drawing with clear function.",
+      "dateAdded": "2026-01-13T10:00:00Z"
+    }
+  ]
+}
