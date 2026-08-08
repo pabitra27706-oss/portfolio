@@ -852,16 +852,29 @@
     copyText(DOM.indexOutput.value, DOM.copyIndexBtn)
   );
 
+  /* ============================================
+     DOWNLOAD TOPIC JSON - FIXED VERSION
+     ============================================ */
+
   DOM.downloadTopicBtn.addEventListener("click", () => {
     const text = DOM.topicOutput.value;
     if (!text) { alert("Generate JSON first."); return; }
-    const id   = (DOM.topicId.value.trim() || "topic")
-                   .replace(/[^a-z0-9-]/gi, "-").toLowerCase();
+
+    /* Use title instead of ID for filename */
+    const title = DOM.topicTitle.value.trim() || "topic";
+    const fileName = title
+        .toLowerCase()
+        .replace(/[^a-z0-9]+/g, "-")
+        .replace(/^-+|-+$/g, "");
+
     const blob = new Blob([text], { type: "application/json" });
     const url  = URL.createObjectURL(blob);
     const a    = document.createElement("a");
-    a.href = url; a.download = `${id}.json`;
-    document.body.appendChild(a); a.click(); a.remove();
+    a.href = url; 
+    a.download = `${fileName}.json`;  // ✅ FIXED: uses clean title, not ID
+    document.body.appendChild(a); 
+    a.click(); 
+    a.remove();
     setTimeout(() => URL.revokeObjectURL(url), 4000);
   });
 
